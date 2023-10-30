@@ -167,7 +167,7 @@ describe('getMessages', () => {
 
     const { response: firstPageResponse, resultMessages: firstPageMockedMessages } = createGetMessagesResponse(10);
     const { response: secondPageResponse, resultMessages: secondPageMockedMessages } = createGetMessagesResponse(10);
-    const { response: thirdPageResponse } = createGetMessagesResponse(10);
+    const { response: thirdPageResponse, resultMessages: thirdPageMockedMessages } = createGetMessagesResponse(10);
 
     when(axios.get(requestUrl, { params: { ...reqParams, createdBefore: createdBefore.getTime() } })).thenResolve({
       data: firstPageResponse,
