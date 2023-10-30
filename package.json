@@ -14,7 +14,7 @@
     "linkedin-web-api"
   ],
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   },
   "repository": {
     "type": "git",
@@ -54,7 +54,7 @@
     "@types/cookie": "^0.5.3",
     "@types/jest": "^29.5.6",
     "@types/lodash": "^4.14.200",
-    "@types/node": "^18.0.3",
+    "@types/node": "^18.18.7",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
     "babel-eslint": "^10.0.3",

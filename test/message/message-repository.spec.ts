@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 import { keyBy, omit, orderBy } from 'lodash';
-import { reset, verify, when } from 'testdouble';
+import { reset, when } from 'testdouble';
 import { URL } from 'url';
 
 import { linkedinApiUrl } from '../../config';
@@ -107,7 +107,7 @@ describe('getMessages', () => {
   it('should be able to scroll messages using scroller', async () => {
     const { response: firstPageResponse, resultMessages: firstPageMockedMessages } = createGetMessagesResponse(10);
     const { response: secondPageResponse, resultMessages: secondPageMockedMessages } = createGetMessagesResponse(10);
-    const { response: thirdPageResponse, resultMessages: thirdPageMockedMessages } = createGetMessagesResponse(10);
+    const { response: thirdPageResponse } = createGetMessagesResponse(10);
 
     when(axios.get(requestUrl, { params: reqParams })).thenResolve({
       data: firstPageResponse,
@@ -139,7 +139,7 @@ describe('getMessages', () => {
   });
 
   it('should be able to restart scroller position', async () => {
-    const { response: firstPageResponse, resultMessages: firstPageMockedMessages } = createGetMessagesResponse(10);
+    const { response: firstPageResponse } = createGetMessagesResponse(10);
 
     when(axios.get(requestUrl, { params: reqParams })).thenResolve({
       data: firstPageResponse,
@@ -164,10 +164,9 @@ describe('getMessages', () => {
 
   it('should be able to override scroller starting point', async () => {
     const createdBefore = new Date();
-
     const { response: firstPageResponse, resultMessages: firstPageMockedMessages } = createGetMessagesResponse(10);
     const { response: secondPageResponse, resultMessages: secondPageMockedMessages } = createGetMessagesResponse(10);
-    const { response: thirdPageResponse, resultMessages: thirdPageMockedMessages } = createGetMessagesResponse(10);
+    const { response: thirdPageResponse } = createGetMessagesResponse(10);
 
     when(axios.get(requestUrl, { params: { ...reqParams, createdBefore: createdBefore.getTime() } })).thenResolve({
       data: firstPageResponse,
@@ -201,7 +200,7 @@ describe('getMessages', () => {
   it('should be able to scroll to previous response pages', async () => {
     const { response: firstPageResponse, resultMessages: firstPageMockedMessages } = createGetMessagesResponse(10);
     const { response: secondPageResponse, resultMessages: secondPageMockedMessages } = createGetMessagesResponse(10);
-    const { response: thirdPageResponse, resultMessages: thirdPageMockedMessages } = createGetMessagesResponse(10);
+    const { response: thirdPageResponse } = createGetMessagesResponse(10);
 
     when(axios.get(requestUrl, { params: reqParams })).thenResolve({
       data: firstPageResponse,

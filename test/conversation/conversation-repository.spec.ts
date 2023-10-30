@@ -142,7 +142,7 @@ describe('getConversations', () => {
     const { response: firstPageResponse, resultConversations: firstPageMockedConversations } = createGetConversationsResponse(10);
     const { response: secondPageResponse, resultConversations: secondPageMockedConversations } =
       createGetConversationsResponse(10);
-    const { response: thirdPageResponse, resultConversations: thirdPageMockedConversations } = createGetConversationsResponse(10);
+    const { response: thirdPageResponse } = createGetConversationsResponse(10);
 
     when(axios.get(requestUrl, { params: reqParams })).thenResolve({
       data: firstPageResponse,
@@ -179,11 +179,10 @@ describe('getConversations', () => {
 
   it('should be able to override starting scroller starting point', async () => {
     const createdBefore = new Date();
-
     const { response: firstPageResponse, resultConversations: firstPageMockedConversations } = createGetConversationsResponse(10);
     const { response: secondPageResponse, resultConversations: secondPageMockedConversations } =
       createGetConversationsResponse(10);
-    const { response: thirdPageResponse, resultConversations: thirdPageMockedConversations } = createGetConversationsResponse(10);
+    const { response: thirdPageResponse } = createGetConversationsResponse(10);
 
     when(axios.get(requestUrl, { params: { ...reqParams, createdBefore: createdBefore.getTime() } })).thenResolve({
       data: firstPageResponse,
@@ -222,7 +221,7 @@ describe('getConversations', () => {
     const { response: firstPageResponse, resultConversations: firstPageMockedConversations } = createGetConversationsResponse(10);
     const { response: secondPageResponse, resultConversations: secondPageMockedConversations } =
       createGetConversationsResponse(10);
-    const { response: thirdPageResponse, resultConversations: thirdPageMockedConversations } = createGetConversationsResponse(10);
+    const { response: thirdPageResponse } = createGetConversationsResponse(10);
 
     when(axios.get(requestUrl, { params: reqParams })).thenResolve({
       data: firstPageResponse,
