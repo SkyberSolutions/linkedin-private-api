@@ -139,7 +139,7 @@ describe('getMessages', () => {
   });
 
   it('should be able to restart scroller position', async () => {
-    const { response: firstPageResponse } = createGetMessagesResponse(10);
+    const { response: firstPageResponse, resultMessages: firstPageMockedMessages } = createGetMessagesResponse(10);
 
     when(axios.get(requestUrl, { params: reqParams })).thenResolve({
       data: firstPageResponse,
