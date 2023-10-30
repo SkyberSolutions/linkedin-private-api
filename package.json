@@ -26,7 +26,7 @@
   ],
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint -c .eslintrc.js",
+    "lint": "eslint -c .eslintrc.js --ext .ts src",
     "typecheck": "eslint --ext .ts --ext .js src",
     "build": "rimraf dist && tsc -p tsconfig.build.json",
     "test": "NODE_ENV=test jest",
