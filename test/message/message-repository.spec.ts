@@ -107,7 +107,7 @@ describe('getMessages', () => {
   it('should be able to scroll messages using scroller', async () => {
     const { response: firstPageResponse, resultMessages: firstPageMockedMessages } = createGetMessagesResponse(10);
     const { response: secondPageResponse, resultMessages: secondPageMockedMessages } = createGetMessagesResponse(10);
-    const { response: thirdPageResponse } = createGetMessagesResponse(10);
+    const { response: thirdPageResponse, resultMessages: thirdPageMockedMessages } = createGetMessagesResponse(10);
 
     when(axios.get(requestUrl, { params: reqParams })).thenResolve({
       data: firstPageResponse,
@@ -201,7 +201,7 @@ describe('getMessages', () => {
   it('should be able to scroll to previous response pages', async () => {
     const { response: firstPageResponse, resultMessages: firstPageMockedMessages } = createGetMessagesResponse(10);
     const { response: secondPageResponse, resultMessages: secondPageMockedMessages } = createGetMessagesResponse(10);
-    const { response: thirdPageResponse } = createGetMessagesResponse(10);
+    const { response: thirdPageResponse, resultMessages: thirdPageMockedMessages } = createGetMessagesResponse(10);
 
     when(axios.get(requestUrl, { params: reqParams })).thenResolve({
       data: firstPageResponse,
