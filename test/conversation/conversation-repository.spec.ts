@@ -1,4 +1,4 @@
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import { keyBy, omit, orderBy } from 'lodash';
 import { reset, when } from 'testdouble';
 import { URL } from 'url';
@@ -72,7 +72,7 @@ describe('getConversations', () => {
   });
 
   it('should fetch conversations by single profileId', async () => {
-    const profileId = faker.datatype.uuid();
+    const profileId = faker.string.uuid();
     const { response, resultConversations } = createGetConversationsResponse(1);
     const keyedConversations = keyBy(resultConversations, 'entityUrn');
 
@@ -89,7 +89,7 @@ describe('getConversations', () => {
   });
 
   it('should fetch conversations by multiple profileId', async () => {
-    const profileIds = [faker.datatype.uuid(), faker.datatype.uuid()];
+    const profileIds = [faker.string.uuid(), faker.string.uuid()];
     const { response, resultConversations } = createGetConversationsResponse(1);
     const keyedConversations = keyBy(resultConversations, 'entityUrn');
 
@@ -106,7 +106,7 @@ describe('getConversations', () => {
   });
 
   it('should add conversationId on the result conversations', async () => {
-    const conversationId = faker.datatype.uuid();
+    const conversationId = faker.string.uuid();
     const { response, resultConversations } = createGetConversationsResponse(1);
     resultConversations[0].entityUrn = `urn:li:fs_conversation:${conversationId}`;
 
@@ -123,7 +123,7 @@ describe('getConversations', () => {
   it('should populate participants profile on the result conversations', async () => {
     const { response, resultConversations, resultProfiles } = createGetConversationsResponse(1);
     const profileIds = resultProfiles.map(profile => profile.entityUrn.replace('urn:li:fs_miniProfile:', ''));
-    const participantIds = profileIds.map(profileId => `urn:li:fs_messagingMember:(${faker.datatype.number()},${profileId})`);
+    const participantIds = profileIds.map(profileId => `urn:li:fs_messagingMember:(${faker.number.int()},${profileId})`);
     resultConversations[0]['*participants'] = participantIds;
 
     when(axios.get(requestUrl, { params: reqParams })).thenResolve({ data: response });
@@ -286,7 +286,7 @@ describe('getConversation', () => {
   const createRequestUrl = (conversationId: string) => `${requestUrl}/${conversationId}`;
 
   it('should get conversation by conversation id', async () => {
-    const conversationId = faker.datatype.uuid();
+    const conversationId = faker.string.uuid();
     const { response, resultConversation } = createGetConversationResponse();
 
     when(axios.get(createRequestUrl(conversationId), { params: reqParams })).thenResolve({ data: response });
@@ -298,7 +298,7 @@ describe('getConversation', () => {
   });
 
   it('should add conversation id to the result conversation', async () => {
-    const conversationId = faker.datatype.uuid();
+    const conversationId = faker.string.uuid();
     const { response, resultConversation } = createGetConversationResponse();
     resultConversation.entityUrn = `urn:li:fs_conversation:${conversationId}`;
 
@@ -311,10 +311,10 @@ describe('getConversation', () => {
   });
 
   it('should add participants to the result conversation', async () => {
-    const conversationId = faker.datatype.uuid();
+    const conversationId = faker.string.uuid();
     const { response, resultConversation, resultProfiles } = createGetConversationResponse();
     const profileIds = resultProfiles.map(profile => profile.entityUrn.replace('urn:li:fs_miniProfile:', ''));
-    const participantIds = profileIds.map(profileId => `urn:li:fs_messagingMember:(${faker.datatype.number()},${profileId})`);
+    const participantIds = profileIds.map(profileId => `urn:li:fs_messagingMember:(${faker.number.int()},${profileId})`);
     resultConversation['*participants'] = participantIds;
 
     when(axios.get(createRequestUrl(conversationId), { params: reqParams })).thenResolve({ data: response });

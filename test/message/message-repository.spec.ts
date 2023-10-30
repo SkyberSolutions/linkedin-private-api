@@ -1,4 +1,4 @@
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import { keyBy, omit, orderBy } from 'lodash';
 import { reset, verify, when } from 'testdouble';
 import { URL } from 'url';
@@ -7,7 +7,7 @@ import { linkedinApiUrl } from '../../config';
 import { defaultMocks } from '../utils/defaultMocks';
 import { createGetMessagesResponse, createSendMessageResponse } from './message-factories';
 
-const conversationId = faker.datatype.uuid();
+const conversationId = faker.string.uuid();
 const requestUrl = new URL(`messaging/conversations/${conversationId}/events`, linkedinApiUrl).toString();
 const username = 'username';
 const password = 'password';
@@ -91,7 +91,7 @@ describe('getMessages', () => {
     const { response, resultMessages, resultProfiles } = createGetMessagesResponse(1);
     const profileId = resultProfiles[0].entityUrn.replace('urn:li:fs_miniProfile:', '');
 
-    const participantId = `urn:li:fs_messagingMember:(${faker.datatype.number()},${profileId})`;
+    const participantId = `urn:li:fs_messagingMember:(${faker.number.int()},${profileId})`;
     resultMessages[0]['*from'] = participantId;
 
     when(axios.get(requestUrl, { params: reqParams })).thenResolve({ data: response });
@@ -261,7 +261,7 @@ describe('getMessages', () => {
 
 describe('sendMessage', () => {
   const sendMessageRequestUrl = new URL('messaging/conversations', linkedinApiUrl).toString();
-  const profileId = faker.datatype.uuid();
+  const profileId = faker.string.uuid();
   const text = faker.lorem.sentence();
   const queryParams = {
     action: 'create',

@@ -1,4 +1,4 @@
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import { orderBy, random, times } from 'lodash';
 
 import { INVITATION_TYPE } from '../../src/entities/linkedin-invitation.entity';
@@ -10,16 +10,16 @@ const createInvitation = (count: number) =>
     '*fromMember': createMiniProfileId(),
     '*toMember': createMiniProfileId(),
     customMessage: faker.datatype.boolean(),
-    entityUrn: faker.datatype.uuid(),
+    entityUrn: faker.string.uuid(),
     invitationType: Object.values(INVITATION_TYPE)[random(0, 1)],
     invitee: {
       $type: 'com.linkedin.voyager.relationships.invitation.ProfileInvitee',
       '*miniProfile': createMiniProfileId(),
     },
-    mailboxItemId: faker.datatype.uuid(),
-    sentTime: faker.datatype.number(),
-    sharedSecret: faker.random.word(),
-    toMemberId: faker.datatype.uuid(),
+    mailboxItemId: faker.string.uuid(),
+    sentTime: faker.number.int(),
+    sharedSecret: faker.lorem.word(),
+    toMemberId: faker.string.uuid(),
     unseen: faker.datatype.boolean(),
   }));
 

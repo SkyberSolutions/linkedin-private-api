@@ -1,4 +1,4 @@
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import { keyBy, omit, orderBy } from 'lodash';
 import { reset, when } from 'testdouble';
 import { URL } from 'url';
@@ -578,8 +578,8 @@ describe('getReceivedInvitations', () => {
 });
 
 describe('sendInvitation', () => {
-  const profileId = faker.datatype.uuid();
-  const trackingId = faker.datatype.uuid();
+  const profileId = faker.string.uuid();
+  const trackingId = faker.string.uuid();
   const sentInvitationRequestUrl = new URL('relationships/sentInvitationViewsV2', linkedinApiUrl).toString();
   const requestUrl = new URL('growth/normInvitations', linkedinApiUrl).toString();
   const requestPayload = {
