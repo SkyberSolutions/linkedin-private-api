@@ -29,7 +29,7 @@
     "lint": "eslint -c .eslintrc.js --ext .ts src",
     "typecheck": "eslint --ext .ts --ext .js src",
     "build": "rimraf dist && tsc -p tsconfig.build.json",
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_ENV=test jest --silent",
     "test:coverage": "npm run test -- --coverage",
     "prepublish": "npm run docs && npm run build",
     "prepare": "npm run docs && npm run build",
@@ -49,7 +49,7 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0",
+    "@faker-js/faker": "^8.2.0",
     "@types/config": "^0.0.41",
     "@types/cookie": "^0.5.3",
     "@types/jest": "^29.5.6",
