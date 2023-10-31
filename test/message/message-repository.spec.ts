@@ -7,7 +7,7 @@ import { linkedinApiUrl } from '../../config';
 import { defaultMocks } from '../utils/defaultMocks';
 import { createGetMessagesResponse, createSendMessageResponse } from './message-factories';
 
-const conversationId = faker.datatype.uuid();
+const conversationId = faker.string.uuid();
 const requestUrl = new URL(`messaging/conversations/${conversationId}/events`, linkedinApiUrl).toString();
 const username = 'username';
 const password = 'password';
@@ -261,7 +261,7 @@ describe('getMessages', () => {
 
 describe('sendMessage', () => {
   const sendMessageRequestUrl = new URL('messaging/conversations', linkedinApiUrl).toString();
-  const profileId = faker.datatype.uuid();
+  const profileId = faker.string.uuid();
   const text = faker.lorem.sentence();
   const queryParams = {
     action: 'create',

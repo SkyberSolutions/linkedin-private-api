@@ -5,7 +5,7 @@ import { LinkedInCompany, LinkedInProfile, LinkedInVectorArtifact, LinkedInVecto
 import { LinkedInMiniProfile } from '../../src/entities/linkedin-mini-profile.entity';
 import { LinkedInPhotoFilterPicture } from '../../src/entities/linkedin-profile.entity';
 
-export const createMiniProfileId = () => `urn:li:fs_miniProfile:${faker.datatype.uuid()}`;
+export const createMiniProfileId = () => `urn:li:fs_miniProfile:${faker.string.uuid()}`;
 
 const createVectorArtifact = (count: number): LinkedInVectorArtifact[] =>
   times(count, () => ({
@@ -28,9 +28,9 @@ const createCompany = (count: number): LinkedInCompany[] =>
     $type: 'com.linkedin.voyager.dash.organization.Company',
     $anti_abuse_annotations: [{ attributeId: faker.datatype.number(), entityId: faker.datatype.number() }],
     $recipeTypes: [faker.random.word()],
-    entityUrn: faker.datatype.uuid(),
-    industry: { [faker.datatype.uuid()]: faker.random.word() },
-    industryUrns: [faker.datatype.uuid()],
+    entityUrn: faker.string.uuid(),
+    industry: { [faker.string.uuid()]: faker.random.word() },
+    industryUrns: [faker.string.uuid()],
     logo: {
       vetorImage: createVectorImage(1)[0],
     },
@@ -42,32 +42,32 @@ const createCompany = (count: number): LinkedInCompany[] =>
 const createProfilePicture = (count: number): LinkedInPhotoFilterPicture[] =>
   times(count, () => ({
     $type: 'com.linkedin.voyager.dash.identity.profile.PhotoFilterPicture',
-    $recipeTypes: [faker.datatype.uuid()],
+    $recipeTypes: [faker.string.uuid()],
     displayImageReference: {
       vectorImage: createVectorImage(1)[0],
     },
-    displayImageUrn: faker.datatype.uuid(),
+    displayImageUrn: faker.string.uuid(),
     photoFilterEditInfo: {},
   }));
 
 const createProfile = (count: number): Partial<LinkedInProfile>[] =>
   times(count, () => ({
     $type: 'com.linkedin.voyager.dash.identity.profile.Profile',
-    '*industry': faker.datatype.uuid(),
-    '*profileCertifications': faker.datatype.uuid(),
-    '*profileCourses': faker.datatype.uuid(),
-    '*profileEducations': faker.datatype.uuid(),
-    '*profileHonors': faker.datatype.uuid(),
-    '*profileLanguages': faker.datatype.uuid(),
-    '*profileOrganizations': faker.datatype.uuid(),
-    '*profilePatents': faker.datatype.uuid(),
-    '*profilePositionGroups': faker.datatype.uuid(),
-    '*profileProjects': faker.datatype.uuid(),
-    '*profilePublications': faker.datatype.uuid(),
-    '*profileSkills': faker.datatype.uuid(),
-    '*profileTestScores': faker.datatype.uuid(),
-    '*profileTreasuryMediaProfile': faker.datatype.uuid(),
-    '*profileVolunteerExperiences': faker.datatype.uuid(),
+    '*industry': faker.string.uuid(),
+    '*profileCertifications': faker.string.uuid(),
+    '*profileCourses': faker.string.uuid(),
+    '*profileEducations': faker.string.uuid(),
+    '*profileHonors': faker.string.uuid(),
+    '*profileLanguages': faker.string.uuid(),
+    '*profileOrganizations': faker.string.uuid(),
+    '*profilePatents': faker.string.uuid(),
+    '*profilePositionGroups': faker.string.uuid(),
+    '*profileProjects': faker.string.uuid(),
+    '*profilePublications': faker.string.uuid(),
+    '*profileSkills': faker.string.uuid(),
+    '*profileTestScores': faker.string.uuid(),
+    '*profileTreasuryMediaProfile': faker.string.uuid(),
+    '*profileVolunteerExperiences': faker.string.uuid(),
     $recipeTypes: times(3, faker.datatype.uuid),
     defaultToActivityTab: faker.datatype.boolean(),
     educationOnProfileTopCardShown: faker.datatype.boolean(),
@@ -76,23 +76,23 @@ const createProfile = (count: number): Partial<LinkedInProfile>[] =>
     lastName: faker.name.lastName(),
     geoLocationBackfilled: faker.datatype.boolean(),
     headline: faker.random.word(),
-    industryUrn: faker.datatype.uuid(),
+    industryUrn: faker.string.uuid(),
     locationName: faker.random.word(),
-    objectUrn: faker.datatype.uuid(),
+    objectUrn: faker.string.uuid(),
     profilePicture: createProfilePicture(1)[0],
-    publicIdentifier: faker.datatype.uuid(),
-    trackingId: faker.datatype.uuid(),
-    versionTag: faker.datatype.uuid(),
+    publicIdentifier: faker.string.uuid(),
+    trackingId: faker.string.uuid(),
+    versionTag: faker.string.uuid(),
   }));
 
 export const createMiniProfile = (count: number): LinkedInMiniProfile[] =>
   times(count, () => ({
     $type: 'com.linkedin.voyager.identity.shared.MiniProfile',
-    trackingId: faker.datatype.uuid(),
+    trackingId: faker.string.uuid(),
     firstName: faker.random.words(),
     lastName: faker.random.words(),
-    publicIdentifier: faker.datatype.uuid(),
-    objectUrn: faker.datatype.uuid(),
+    publicIdentifier: faker.string.uuid(),
+    objectUrn: faker.string.uuid(),
     entityUrn: createMiniProfileId(),
     occupation: faker.random.words(),
     picture: createVectorImage(1)[0],
