@@ -13,8 +13,8 @@ const createMessage = (count: number): LinkedInMessage[] =>
       $type: 'com.linkedin.pemberly.text.AttributedText',
       text: faker.lorem.sentence(),
     },
-    body: faker.random.word(),
-    messageBodyRenderFormat: faker.random.word(),
+    body: faker.lorem.word(),
+    messageBodyRenderFormat: faker.lorem.word(),
   }));
 
 const createMessageEvent = (count: number): Partial<LinkedInMessageEvent>[] =>

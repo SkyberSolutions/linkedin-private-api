@@ -18,7 +18,7 @@ const createInvitation = (count: number) =>
     },
     mailboxItemId: faker.string.uuid(),
     sentTime: faker.datatype.number(),
-    sharedSecret: faker.random.word(),
+    sharedSecret: faker.lorem.word(),
     toMemberId: faker.string.uuid(),
     unseen: faker.datatype.boolean(),
   }));

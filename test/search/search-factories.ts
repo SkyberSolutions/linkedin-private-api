@@ -28,7 +28,7 @@ const createMiniCompany = (count: number) =>
     objectUrn: faker.string.uuid(),
     showcase: faker.datatype.boolean(),
     trackingId: faker.string.uuid(),
-    universalName: faker.random.word(),
+    universalName: faker.lorem.word(),
   }));
 
 const createBaseCompany = (count: number) =>

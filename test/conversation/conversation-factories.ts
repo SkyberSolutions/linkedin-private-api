@@ -31,7 +31,7 @@ const createConversation = (count: number): Partial<LinkedinConversation>[] =>
     firstMessageUrn: faker.string.uuid(),
     lastActivityAt: faker.datatype.number(),
     muted: faker.datatype.boolean(),
-    notificationStatus: faker.random.word(),
+    notificationStatus: faker.lorem.word(),
     read: faker.datatype.boolean(),
     receipts: createReceipt(2),
     totalEventCount: faker.datatype.number(),
