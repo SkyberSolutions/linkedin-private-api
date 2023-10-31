@@ -127,7 +127,11 @@ describe('userPass', () => {
       await client.login.userPass({ username });
       throw new Error('Expected to throw');
     } catch (err) {
-      expect(err.message).toEqual('password is required for login');
+      if (err instanceof Error) {
+        expect(err.message).toEqual('password is required for login');
+      } else {
+        fail(String(err))
+      }
     }
   });
 });
