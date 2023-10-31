@@ -1,8 +1,9 @@
 {
-  "exclude": ["src/!(entities|core|repositories|scrollers)/*.ts"],
-  "excludeExternals": true,
-  "excludePrivate": true,
-  "skipErrorChecking": true,
-  "excludeProtected": true,
-  "theme": "markdown"
+  "entryPoints": ["src/index.ts"],
+  "out": "docs",
+  "validation": {
+    "notExported": false,
+    "invalidLink": true,
+    "notDocumented": false
+}
 }
