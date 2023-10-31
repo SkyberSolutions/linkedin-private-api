@@ -13,32 +13,32 @@ const createMessage = (count: number): LinkedInMessage[] =>
       $type: 'com.linkedin.pemberly.text.AttributedText',
       text: faker.lorem.sentence(),
     },
-    body: faker.lorem.word(),
-    messageBodyRenderFormat: faker.lorem.word(),
+    body: faker.random.word(),
+    messageBodyRenderFormat: faker.random.word(),
   }));
 
 const createMessageEvent = (count: number): Partial<LinkedInMessageEvent>[] =>
   times(count, () => ({
     $type: 'com.linkedin.voyager.messaging.Event',
-    '*from': faker.string.uuid(),
-    backendUrn: faker.string.uuid(),
-    createdAt: faker.number.int(),
-    dashEntityUrn: faker.string.uuid(),
-    entityUrn: faker.string.uuid(),
-    originToken: faker.string.uuid(),
-    subtype: faker.string.uuid(),
-    previousEventInConversation: faker.string.uuid(),
+    '*from': faker.datatype.uuid(),
+    backendUrn: faker.datatype.uuid(),
+    createdAt: faker.datatype.number(),
+    dashEntityUrn: faker.datatype.uuid(),
+    entityUrn: faker.datatype.uuid(),
+    originToken: faker.datatype.uuid(),
+    subtype: faker.datatype.uuid(),
+    previousEventInConversation: faker.datatype.uuid(),
     eventContent: createMessage(1)[0],
   }));
 
 const createEventCreate = (count: number): LinkedEventCreateResponse[] =>
   times(count, () => ({
     $type: 'com.linkedin.voyager.messaging.create.EventCreateResponse',
-    backendConversationUrn: faker.string.uuid(),
-    backendEventUrn: faker.string.uuid(),
-    conversationUrn: faker.string.uuid(),
-    createdAt: faker.number.int(),
-    eventUrn: faker.string.uuid(),
+    backendConversationUrn: faker.datatype.uuid(),
+    backendEventUrn: faker.datatype.uuid(),
+    conversationUrn: faker.datatype.uuid(),
+    createdAt: faker.datatype.number(),
+    eventUrn: faker.datatype.uuid(),
   }));
 
 export const createSendMessageResponse = () => {
@@ -64,3 +64,4 @@ export const createGetMessagesResponse = (count: number) => {
 
   return { response, resultMessages: orderBy(resultMessages, 'createdAt', 'desc'), resultProfiles };
 };
+

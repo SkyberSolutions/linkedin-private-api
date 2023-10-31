@@ -10,16 +10,16 @@ const createInvitation = (count: number) =>
     '*fromMember': createMiniProfileId(),
     '*toMember': createMiniProfileId(),
     customMessage: faker.datatype.boolean(),
-    entityUrn: faker.string.uuid(),
+    entityUrn: faker.datatype.uuid(),
     invitationType: Object.values(INVITATION_TYPE)[random(0, 1)],
     invitee: {
       $type: 'com.linkedin.voyager.relationships.invitation.ProfileInvitee',
       '*miniProfile': createMiniProfileId(),
     },
-    mailboxItemId: faker.string.uuid(),
-    sentTime: faker.number.int(),
-    sharedSecret: faker.lorem.word(),
-    toMemberId: faker.string.uuid(),
+    mailboxItemId: faker.datatype.uuid(),
+    sentTime: faker.datatype.number(),
+    sharedSecret: faker.random.word(),
+    toMemberId: faker.datatype.uuid(),
     unseen: faker.datatype.boolean(),
   }));
 

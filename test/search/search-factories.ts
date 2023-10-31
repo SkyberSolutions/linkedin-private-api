@@ -6,10 +6,10 @@ import { createMiniProfile } from '../profile/profile-factories';
 const createSearchHit = (count: number) =>
   times(count, () => ({
     $type: 'com.linkedin.voyager.search.SearchHitV2',
-    publicIdentifier: faker.string.uuid(),
-    targetUrn: faker.string.uuid(),
-    trackingId: faker.string.uuid(),
-    trackingUrn: faker.string.uuid(),
+    publicIdentifier: faker.datatype.uuid(),
+    targetUrn: faker.datatype.uuid(),
+    trackingId: faker.datatype.uuid(),
+    trackingUrn: faker.datatype.uuid(),
   }));
 
 const createSearchCluster = (count: number, searchHitCount: number) =>
@@ -23,39 +23,39 @@ const createMiniCompany = (count: number) =>
   times(count, () => ({
     $type: 'com.linkedin.voyager.entities.shared.MiniCompany',
     active: faker.datatype.boolean(),
-    entityUrn: `urn:li:fs_miniCompany:${faker.string.uuid()}`,
-    name: faker.string.uuid(),
-    objectUrn: faker.string.uuid(),
+    entityUrn: `urn:li:fs_miniCompany:${faker.datatype.uuid()}`,
+    name: faker.datatype.uuid(),
+    objectUrn: faker.datatype.uuid(),
     showcase: faker.datatype.boolean(),
-    trackingId: faker.string.uuid(),
-    universalName: faker.lorem.word(),
+    trackingId: faker.datatype.uuid(),
+    universalName: faker.random.word(),
   }));
 
 const createBaseCompany = (count: number) =>
   times(count, () => ({
     $type: 'com.linkedin.voyager.organization.Company',
-    entityUrn: faker.string.uuid(),
+    entityUrn: faker.datatype.uuid(),
     logo: {
       $type: 'com.linkedin.voyager.organization.CompanyLogoImage',
       image: {},
       type: 'SQUARE_LOGO',
     },
-    name: faker.string.uuid(),
+    name: faker.datatype.uuid(),
   }));
 
 const createJobPosting = (count: number) =>
   times(count, () => ({
     $type: 'com.linkedin.voyager.jobs.JobPosting',
-    entityUrn: faker.string.uuid(),
-    dashEntityUrn: faker.string.uuid(),
-    formattedLocation: faker.string.sample(),
-    listedAt: faker.number.int(),
-    title: faker.string.sample(),
+    entityUrn: faker.datatype.uuid(),
+    dashEntityUrn: faker.datatype.uuid(),
+    formattedLocation: faker.datatype.string(),
+    listedAt: faker.datatype.number(),
+    title: faker.datatype.string(),
     workRemoteAllowed: faker.datatype.boolean(),
     companyDetails: {
-      '*companyResolutionResult': faker.string.sample(),
+      '*companyResolutionResult': faker.datatype.string(),
       $type: 'com.linkedin.voyager.jobs.JobPostingCompany',
-      company: faker.string.sample(),
+      company: faker.datatype.string(),
     },
   }));
 
@@ -63,13 +63,13 @@ const createJobSearchHit = (count: number) =>
   times(count, () => ({
     $type: 'com.linkedin.voyager.search.SearchHit',
     hitInfo: {
-      '*jobPostingResolutionResult': faker.string.sample(),
+      '*jobPostingResolutionResult': faker.datatype.string(),
       $type: 'com.linkedin.voyager.search.SearchJobJserp',
-      jobPosting: faker.string.sample(),
+      jobPosting: faker.datatype.string(),
       sponsored: faker.datatype.boolean(),
     },
-    targetPageInstance: faker.string.sample(),
-    trackingId: faker.string.sample(),
+    targetPageInstance: faker.datatype.string(),
+    trackingId: faker.datatype.string(),
   }));
 
 export const creatSearchPeopleResponse = (count: number) => ({
