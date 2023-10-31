@@ -34,8 +34,8 @@ const createCompany = (count: number): LinkedInCompany[] =>
     logo: {
       vetorImage: createVectorImage(1)[0],
     },
-    name: faker.name.firstName(),
-    universalName: faker.name.firstName(),
+    name: faker.person.firstName(),
+    universalName: faker.person.firstName(),
     url: faker.internet.url(),
   }));
 
@@ -68,12 +68,12 @@ const createProfile = (count: number): Partial<LinkedInProfile>[] =>
     '*profileTestScores': faker.string.uuid(),
     '*profileTreasuryMediaProfile': faker.string.uuid(),
     '*profileVolunteerExperiences': faker.string.uuid(),
-    $recipeTypes: times(3, faker.datatype.uuid),
+    $recipeTypes: times(3, faker.string.uuid),
     defaultToActivityTab: faker.datatype.boolean(),
     educationOnProfileTopCardShown: faker.datatype.boolean(),
     entityUrn: createMiniProfileId(),
-    firstName: faker.name.firstName(),
-    lastName: faker.name.lastName(),
+    firstName: faker.person.firstName(),
+    lastName: faker.person.lastName(),
     geoLocationBackfilled: faker.datatype.boolean(),
     headline: faker.lorem.word(),
     industryUrn: faker.string.uuid(),
