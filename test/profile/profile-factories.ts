@@ -12,8 +12,8 @@ const createVectorArtifact = (count: number): LinkedInVectorArtifact[] =>
     $type: 'com.linkedin.common.VectorArtifact',
     expiresAt: faker.datatype.number(),
     fileIdentifyingUrlPathSegment: faker.internet.url(),
-    height: faker.datatype.number(),
-    with: faker.datatype.number(),
+    height: faker.number.int(),
+    with: faker.number.int(),
   }));
 
 const createVectorImage = (count: number): LinkedInVectorImage[] =>
@@ -26,7 +26,7 @@ const createVectorImage = (count: number): LinkedInVectorImage[] =>
 const createCompany = (count: number): LinkedInCompany[] =>
   times(count, () => ({
     $type: 'com.linkedin.voyager.dash.organization.Company',
-    $anti_abuse_annotations: [{ attributeId: faker.datatype.number(), entityId: faker.datatype.number() }],
+    $anti_abuse_annotations: [{ attributeId: faker.number.int(), entityId: faker.number.int() }],
     $recipeTypes: [faker.lorem.word()],
     entityUrn: faker.string.uuid(),
     industry: { [faker.string.uuid()]: faker.lorem.word() },
@@ -125,7 +125,7 @@ export const createGetOwnProfileResponse = () => {
     data: {
       $type: 'com.linkedin.voyager.common.Me',
       '*miniProfile': resultProfile.entityUrn,
-      plainId: faker.datatype.number(),
+      plainId: faker.number.int(),
       premiumSubscriber: faker.datatype.boolean(),
       publicContactInfo: {
         $type: 'com.linkedin.voyager.identity.shared.PublicContactInfo',

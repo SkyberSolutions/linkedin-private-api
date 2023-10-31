@@ -34,8 +34,8 @@ const createConversation = (count: number): Partial<LinkedinConversation>[] =>
     notificationStatus: faker.lorem.word(),
     read: faker.datatype.boolean(),
     receipts: createReceipt(2),
-    totalEventCount: faker.datatype.number(),
-    unreadCount: faker.datatype.number(),
+    totalEventCount: faker.number.int(),
+    unreadCount: faker.number.int(),
     viewerCurrentParticipant: faker.datatype.boolean(),
     withNonConnection: faker.datatype.boolean(),
   }));

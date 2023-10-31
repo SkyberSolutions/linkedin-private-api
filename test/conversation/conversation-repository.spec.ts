@@ -123,7 +123,7 @@ describe('getConversations', () => {
   it('should populate participants profile on the result conversations', async () => {
     const { response, resultConversations, resultProfiles } = createGetConversationsResponse(1);
     const profileIds = resultProfiles.map(profile => profile.entityUrn.replace('urn:li:fs_miniProfile:', ''));
-    const participantIds = profileIds.map(profileId => `urn:li:fs_messagingMember:(${faker.datatype.number()},${profileId})`);
+    const participantIds = profileIds.map(profileId => `urn:li:fs_messagingMember:(${faker.number.int()},${profileId})`);
     resultConversations[0]['*participants'] = participantIds;
 
     when(axios.get(requestUrl, { params: reqParams })).thenResolve({ data: response });
@@ -314,7 +314,7 @@ describe('getConversation', () => {
     const conversationId = faker.string.uuid();
     const { response, resultConversation, resultProfiles } = createGetConversationResponse();
     const profileIds = resultProfiles.map(profile => profile.entityUrn.replace('urn:li:fs_miniProfile:', ''));
-    const participantIds = profileIds.map(profileId => `urn:li:fs_messagingMember:(${faker.datatype.number()},${profileId})`);
+    const participantIds = profileIds.map(profileId => `urn:li:fs_messagingMember:(${faker.number.int()},${profileId})`);
     resultConversation['*participants'] = participantIds;
 
     when(axios.get(createRequestUrl(conversationId), { params: reqParams })).thenResolve({ data: response });

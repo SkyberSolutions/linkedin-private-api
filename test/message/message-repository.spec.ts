@@ -91,7 +91,7 @@ describe('getMessages', () => {
     const { response, resultMessages, resultProfiles } = createGetMessagesResponse(1);
     const profileId = resultProfiles[0].entityUrn.replace('urn:li:fs_miniProfile:', '');
 
-    const participantId = `urn:li:fs_messagingMember:(${faker.datatype.number()},${profileId})`;
+    const participantId = `urn:li:fs_messagingMember:(${faker.number.int()},${profileId})`;
     resultMessages[0]['*from'] = participantId;
 
     when(axios.get(requestUrl, { params: reqParams })).thenResolve({ data: response });
