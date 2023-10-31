@@ -22,7 +22,7 @@ const createMessageEvent = (count: number): Partial<LinkedInMessageEvent>[] =>
     $type: 'com.linkedin.voyager.messaging.Event',
     '*from': faker.string.uuid(),
     backendUrn: faker.string.uuid(),
-    createdAt: faker.datatype.number(),
+    createdAt: faker.date.anytime().getMilliseconds(),
     dashEntityUrn: faker.string.uuid(),
     entityUrn: faker.string.uuid(),
     originToken: faker.string.uuid(),
@@ -37,7 +37,7 @@ const createEventCreate = (count: number): LinkedEventCreateResponse[] =>
     backendConversationUrn: faker.string.uuid(),
     backendEventUrn: faker.string.uuid(),
     conversationUrn: faker.string.uuid(),
-    createdAt: faker.datatype.number(),
+    createdAt: faker.date.anytime().getMilliseconds(),
     eventUrn: faker.string.uuid(),
   }));
 

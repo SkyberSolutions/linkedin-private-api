@@ -13,7 +13,7 @@ const createReceipt = (count: number): LinkedInParticipantReceipts[] =>
     seenReceipt: {
       $type: 'com.linkedin.voyager.messaging.SeenReceipt',
       eventUrn: faker.string.uuid(),
-      seenAt: faker.datatype.number(),
+      seenAt: faker.date.anytime().getMilliseconds(),
     },
   }));
 
@@ -29,7 +29,7 @@ const createConversation = (count: number): Partial<LinkedinConversation>[] =>
     entityUrn: `urn:li:fs_conversation:${faker.string.uuid()}`,
     featureTypes: Object.values(FeaturedType.CREATE_NEW_GROUP_CHAT),
     firstMessageUrn: faker.string.uuid(),
-    lastActivityAt: faker.datatype.number(),
+    lastActivityAt: faker.date.anytime().getMilliseconds(),
     muted: faker.datatype.boolean(),
     notificationStatus: faker.lorem.word(),
     read: faker.datatype.boolean(),

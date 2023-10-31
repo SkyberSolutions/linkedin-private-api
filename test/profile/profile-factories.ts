@@ -10,7 +10,7 @@ export const createMiniProfileId = () => `urn:li:fs_miniProfile:${faker.string.u
 const createVectorArtifact = (count: number): LinkedInVectorArtifact[] =>
   times(count, () => ({
     $type: 'com.linkedin.common.VectorArtifact',
-    expiresAt: faker.datatype.number(),
+    expiresAt: faker.date.anytime().getMilliseconds(),
     fileIdentifyingUrlPathSegment: faker.internet.url(),
     height: faker.number.int(),
     with: faker.number.int(),

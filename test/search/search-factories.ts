@@ -49,7 +49,7 @@ const createJobPosting = (count: number) =>
     entityUrn: faker.string.uuid(),
     dashEntityUrn: faker.string.uuid(),
     formattedLocation: faker.string.sample(),
-    listedAt: faker.datatype.number(),
+    listedAt: faker.date.anytime().getMilliseconds(),
     title: faker.string.sample(),
     workRemoteAllowed: faker.datatype.boolean(),
     companyDetails: {

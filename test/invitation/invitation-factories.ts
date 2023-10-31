@@ -17,7 +17,7 @@ const createInvitation = (count: number) =>
       '*miniProfile': createMiniProfileId(),
     },
     mailboxItemId: faker.string.uuid(),
-    sentTime: faker.datatype.number(),
+    sentTime: faker.date.anytime().getMilliseconds(),
     sharedSecret: faker.lorem.word(),
     toMemberId: faker.string.uuid(),
     unseen: faker.datatype.boolean(),
