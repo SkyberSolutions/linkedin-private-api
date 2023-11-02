@@ -7,6 +7,7 @@ import { LinkedInProfile, PROFILE_TYPE } from '../entities/linkedin-profile.enti
 import { LinkedInVectorImage } from '../entities/linkedin-vector-image.entity';
 import { MiniProfile, ProfileId } from '../entities/mini-profile.entity';
 import { Profile } from '../entities/profile.entity';
+import { GetProfileResponse } from 'src/responses';
 
 const getProfilePictureUrls = (picture?: LinkedInVectorImage): string[] =>
   map(picture?.artifacts, artifact => `${picture?.rootUrl}${artifact.fileIdentifyingUrlPathSegment}`);
@@ -27,17 +28,8 @@ export const getProfilesFromResponse = <T extends { included: (LinkedInMiniProfi
   return keyBy(transformedMiniProfiles, 'profileId');
 };
 
-export class ProfileRepository {
-  private client: Client;
-
-  constructor({ client }: { client: Client }) {
-    this.client = client;
-  }
-
-  async getProfile({ publicIdentifier }: { publicIdentifier: string }): Promise<Profile> {
-    const response = await this.client.request.profile.getProfile({ publicIdentifier });
-
-    const results = response.included || [];
+export const getProfileFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): Profile => {
+  const results = response.included || [];
 
     const profile = results.find(r => r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
     const company = results.find(r => r.$type === COMPANY_TYPE && profile.headline.includes(r.name)) as LinkedInCompany;
@@ -48,6 +40,21 @@ export class ProfileRepository {
       company,
       pictureUrls,
     };
+};
+
+export class ProfileRepository {
+  private client: Client;
+
+  constructor({ client }: { client: Client }) {
+    this.client = client;
+  }
+
+  async getProfile({ publicIdentifier }: { publicIdentifier: string }): Promise<Profile> {
+    const response = await this.client.request.profile.getProfile({ publicIdentifier });
+
+    const profile = getProfileFromResponse(publicIdentifier, response)
+
+    return profile
   }
 
   async getOwnProfile(): Promise<Profile | null> {
