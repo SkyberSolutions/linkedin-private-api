@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 import { random, times } from 'lodash';
-import { LinkedInCompany, LinkedInProfile, LinkedInVectorArtifact, LinkedInVectorImage } from 'src';
+import { GetProfileResponse, LinkedInCompany, LinkedInProfile, LinkedInVectorArtifact, LinkedInVectorImage } from 'src';
 
 import { LinkedInMiniProfile } from '../../src/entities/linkedin-mini-profile.entity';
 import { LinkedInPhotoFilterPicture, LinkedInPrimaryLocale, LinkedInProfileGeoLocation, LinkedInProfileLocation } from '../../src/entities/linkedin-profile.entity';
@@ -150,9 +150,17 @@ export const createGetProfileResponse = () => {
 
   resultProfile.headline = `${faker.random.word} at ${resultCompany.name}`;
 
-  const response = {
+  const response: GetProfileResponse = {
     data: {
-      data: {},
+      elements: times(3, faker.string.uuid),
+      $type: "com.linkedin.restli.common.CollectionResponse",
+      entityUrn: faker.string.uuid(),
+      paging: {
+        count: 10,
+        links: [],
+        start: 0
+      },
+      metadata: undefined
     },
     included: [...profiles, ...companies],
   };
