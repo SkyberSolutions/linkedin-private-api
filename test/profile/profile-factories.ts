@@ -3,7 +3,8 @@ import { random, times } from 'lodash';
 import { LinkedInCompany, LinkedInProfile, LinkedInVectorArtifact, LinkedInVectorImage } from 'src';
 
 import { LinkedInMiniProfile } from '../../src/entities/linkedin-mini-profile.entity';
-import { LinkedInPhotoFilterPicture } from '../../src/entities/linkedin-profile.entity';
+import { LinkedInPhotoFilterPicture, LinkedInPrimaryLocale, LinkedInProfileGeoLocation, LinkedInProfileLocation } from '../../src/entities/linkedin-profile.entity';
+import { Country } from '../../src/types/country-code.enum';
 
 export const createMiniProfileId = () => `urn:li:fs_miniProfile:${faker.string.uuid()}`;
 
@@ -50,8 +51,40 @@ const createProfilePicture = (count: number): LinkedInPhotoFilterPicture[] =>
     photoFilterEditInfo: {},
   }));
 
-const createProfile = (count: number): Partial<LinkedInProfile>[] =>
-  times(count, () => ({
+const createLinkedInProfileGeoLocation = (): LinkedInProfileGeoLocation => {
+  return {
+    $type: 'com.linkedin.voyager.dash.identity.profile.ProfileGeoLocation',
+  '*geo': faker.string.uuid(),
+  $recipeTypes: [faker.string.uuid()],
+  geoUrn: faker.string.uuid()
+  }
+}
+
+const createLinkedInProfileLocation = (): LinkedInProfileLocation => {
+  return {
+    $type: 'com.linkedin.voyager.dash.identity.profile.ProfileLocation',
+    countryCode: Country.UnitedStates
+  }
+}
+
+const createLinkedInPrimaryLocale = (): LinkedInPrimaryLocale => {
+  return {
+    $type: 'com.linkedin.common.Locale',
+  $anti_abuse_annotations: [{
+    attributeId: faker.number.int(),
+    entityId: faker.number.int(),
+  }],
+  country: Country.UnitedStates,
+  language: "en_US"
+  }
+}
+
+const createProfile = (count: number): LinkedInProfile[] =>
+  times(count, () => {
+    const firstName = faker.person.firstName();
+    const lastName = faker.person.lastName();
+    const headline = faker.lorem.word();
+    return {
     $type: 'com.linkedin.voyager.dash.identity.profile.Profile',
     '*industry': faker.string.uuid(),
     '*profileCertifications': faker.string.uuid(),
@@ -72,18 +105,27 @@ const createProfile = (count: number): Partial<LinkedInProfile>[] =>
     defaultToActivityTab: faker.datatype.boolean(),
     educationOnProfileTopCardShown: faker.datatype.boolean(),
     entityUrn: createMiniProfileId(),
-    firstName: faker.person.firstName(),
-    lastName: faker.person.lastName(),
+    firstName: firstName,
+    lastName: lastName,
+    geoLocation: createLinkedInProfileGeoLocation(),
     geoLocationBackfilled: faker.datatype.boolean(),
-    headline: faker.lorem.word(),
+    headline: headline,
     industryUrn: faker.string.uuid(),
+    location: createLinkedInProfileLocation(),
     locationName: faker.lorem.word(),
+    multiLocaleFirstName: {"en_US": firstName},
+    multiLocaleHeadline: {"en_US": headline},
+    multiLocaleLastName: {"en_US": lastName},
     objectUrn: faker.string.uuid(),
+    primaryLocale: createLinkedInPrimaryLocale(),
     profilePicture: createProfilePicture(1)[0],
     publicIdentifier: faker.string.uuid(),
+    supportedLocales: [],
     trackingId: faker.string.uuid(),
     versionTag: faker.string.uuid(),
-  }));
+  };
+  
+});
 
 export const createMiniProfile = (count: number): LinkedInMiniProfile[] =>
   times(count, () => ({

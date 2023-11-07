@@ -6,3 +6,4 @@ sessions.json
 .DS_Store
 coverage
 .idea/
+test/profile/exampleGetProfileResponse.json
