@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 import { random, times } from 'lodash';
-import { GetProfileResponse, LinkedInCompany, LinkedInProfile, LinkedInVectorArtifact, LinkedInVectorImage } from 'src';
+import { GetProfileResponse, LinkedInCollectionResponse, LinkedInCompany, LinkedInProfile, LinkedInVectorArtifact, LinkedInVectorImage, UrnCollection } from 'src';
 
 import { LinkedInMiniProfile } from '../../src/entities/linkedin-mini-profile.entity';
 import { LinkedInPhotoFilterPicture, LinkedInPrimaryLocale, LinkedInProfileGeoLocation, LinkedInProfileLocation } from '../../src/entities/linkedin-profile.entity';
@@ -79,6 +79,27 @@ const createLinkedInPrimaryLocale = (): LinkedInPrimaryLocale => {
   }
 }
 
+export const createPositionGroupCollectionResponse = (count: number) => {
+ 
+  const response: LinkedInCollectionResponse<string, undefined> = {
+    data: {
+      elements: times(count, faker.string.uuid),
+      $type: 'com.linkedin.restli.common.CollectionResponse',
+      entityUrn: faker.string.uuid(),
+      paging: {
+        count: count,
+        links: [],
+        start: 0
+      },
+      metadata: undefined
+    },
+    included: []
+  }
+  
+
+return response
+};
+
 const createProfile = (count: number): LinkedInProfile[] =>
   times(count, () => {
     const firstName = faker.person.firstName();
@@ -142,10 +163,19 @@ export const createMiniProfile = (count: number): LinkedInMiniProfile[] =>
   }));
 
 export const createGetProfileResponse = () => {
+  const collection: UrnCollection[] = []
   const profiles = createProfile(10);
-  const companies = createCompany(10);
 
+  profiles.forEach(profile => {
+    const positionGroupCollection = createPositionGroupCollectionResponse(3)
+    collection.push(positionGroupCollection)
+    profile['*profilePositionGroups'] = positionGroupCollection.data.entityUrn
+  });
+
+  const companies = createCompany(10);
+  
   const resultProfile = profiles[random(0, 9)];
+
   const resultCompany = companies[random(0, 9)];
 
   resultProfile.headline = `${faker.random.word} at ${resultCompany.name}`;
@@ -162,7 +192,7 @@ export const createGetProfileResponse = () => {
       },
       metadata: undefined
     },
-    included: [...profiles, ...companies],
+    included: [...profiles, ...companies, ...collection],
   };
 
   return { response, resultProfile, resultCompany };
@@ -186,3 +216,5 @@ export const createGetOwnProfileResponse = () => {
 
   return { response, resultProfile };
 };
+
+

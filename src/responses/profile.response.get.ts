@@ -2,8 +2,11 @@ import { LinkedInCollectionResponse } from '../entities/linkedin-collection-resp
 import { LinkedInCompany } from '../entities/linkedin-company.entity';
 import { LinkedInProfile, ProfileUrn } from '../entities/linkedin-profile.entity';
 
+export type UrnCollection = LinkedInCollectionResponse<string, undefined>;
+
 export type GetProfileResponse = LinkedInCollectionResponse<
                                                             ProfileUrn, 
                                                             LinkedInProfile | 
-                                                            LinkedInCompany
+                                                            LinkedInCompany |
+                                                            UrnCollection
                                                             >;

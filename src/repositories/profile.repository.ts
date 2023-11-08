@@ -7,8 +7,9 @@ import { LinkedInProfile, PROFILE_TYPE } from '../entities/linkedin-profile.enti
 import { LinkedInVectorImage } from '../entities/linkedin-vector-image.entity';
 import { MiniProfile, ProfileId } from '../entities/mini-profile.entity';
 import { Profile } from '../entities/profile.entity';
-import { GetProfileResponse } from 'src/responses';
-import { LinkedInPositionGroup } from 'src/entities/linkedin-position-group.entity';
+import { GetProfileResponse } from '../responses';
+import { LinkedInPositionGroup } from '../entities/linkedin-position-group.entity';
+import { COLLECTION_RESPONSE_TYPE } from '../entities/linkedin-collection-response.entity';
 
 const getProfilePictureUrls = (picture?: LinkedInVectorImage): string[] =>
   map(picture?.artifacts, artifact => `${picture?.rootUrl}${artifact.fileIdentifyingUrlPathSegment}`);
@@ -29,19 +30,18 @@ export const getProfilesFromResponse = <T extends { included: (LinkedInMiniProfi
   return keyBy(transformedMiniProfiles, 'profileId');
 };
 
-export const getPositionGroupsFromResponse = ( /* publicIdentifier: string, response: GetProfileResponse */ ): LinkedInPositionGroup[] => {
-  /*
+export const getPositionGroupsFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): LinkedInPositionGroup[] => {
+  
   const results = response.included || [];
 
-  const profile = results.find(r => r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
+  const profile = results.find(r => '$type' in r && r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
+
   const positionGroupsUrn = profile['*profilePositionGroups']
 
-  const positionGroupsUrns = results.find(r => r.entityUrn === positionGroupsUrn);
+  const positionGroupsUrns = results.find(r => 'data' in r && r.data.$type === COLLECTION_RESPONSE_TYPE && r.data.entityUrn === positionGroupsUrn);
 
-  const positionGroups = positionGroupsUrns.map
-  */
-
-    
+  console.log("PositionGroupUrns: " + JSON.stringify(positionGroupsUrns))
+ 
   return []
 };
 
@@ -50,10 +50,11 @@ export const getPositionGroupsFromResponse = ( /* publicIdentifier: string, resp
 export const getProfileFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): Profile => {
   const results = response.included || [];
 
-    const profile = results.find(r => r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
-    const company = results.find(r => r.$type === COMPANY_TYPE && profile.headline.includes(r.name)) as LinkedInCompany;
+    const profile = results.find(r => '$type' in r && r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
+    
+    const company = results.find(r => '$type' in r && r.$type === COMPANY_TYPE && profile.headline.includes(r.name)) as LinkedInCompany;
     const pictureUrls = getProfilePictureUrls(get(profile, 'profilePicture.displayImageReference.vectorImage', undefined));
-    const positionGroups = getPositionGroupsFromResponse()
+    const positionGroups = getPositionGroupsFromResponse(publicIdentifier, response)
 
     return {
       ...profile,
