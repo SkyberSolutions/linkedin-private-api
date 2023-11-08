@@ -1,6 +1,7 @@
 import { difference } from 'lodash';
 import { createGetProfileResponse } from './profile-factories';
 import { getProfileFromResponse } from '../../src/repositories/profile.repository';
+import { LinkedInPositionGroup } from 'src/entities/linkedin-position-group.entity';
 
 describe('getProfile', () => {
   it('should return the correct profile from the response', async () => {
@@ -25,5 +26,14 @@ describe('getProfile', () => {
 
     expect(profile.pictureUrls).toHaveLength(4);
     profile.pictureUrls.forEach((url: string) => expect(typeof url).toEqual('string'));
+  });
+
+
+  it('should populate positionGroups on the result profile', async () => {
+    const { response, resultProfile } = createGetProfileResponse();
+    const profile = getProfileFromResponse(resultProfile.publicIdentifier, response)
+
+    expect(profile.positionGroups).toHaveLength(3);
+    profile.positionGroups.forEach((group: LinkedInPositionGroup) => expect(typeof group['*company']).toEqual('string'));
   });
 });

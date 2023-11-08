@@ -7,8 +7,8 @@ import { LinkedInProfile, PROFILE_TYPE } from '../entities/linkedin-profile.enti
 import { LinkedInVectorImage } from '../entities/linkedin-vector-image.entity';
 import { MiniProfile, ProfileId } from '../entities/mini-profile.entity';
 import { Profile } from '../entities/profile.entity';
-import { GetProfileResponse } from '../responses';
-import { LinkedInPositionGroup } from '../entities/linkedin-position-group.entity';
+import { GetProfileResponse, UrnCollection } from '../responses';
+import { LinkedInPositionGroup, POSITION_GROUP_TYPE } from '../entities/linkedin-position-group.entity';
 import { COLLECTION_RESPONSE_TYPE } from '../entities/linkedin-collection-response.entity';
 
 const getProfilePictureUrls = (picture?: LinkedInVectorImage): string[] =>
@@ -30,6 +30,11 @@ export const getProfilesFromResponse = <T extends { included: (LinkedInMiniProfi
   return keyBy(transformedMiniProfiles, 'profileId');
 };
 
+// SOURCE: https://stackoverflow.com/questions/43118692/typescript-filter-out-nulls-from-an-array
+function notEmpty<TValue>(value: TValue | null | undefined): value is TValue {
+  return value !== null && value !== undefined;
+}
+
 export const getPositionGroupsFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): LinkedInPositionGroup[] => {
   
   const results = response.included || [];
@@ -38,12 +43,17 @@ export const getPositionGroupsFromResponse = ( publicIdentifier: string, respons
 
   const positionGroupsUrn = profile['*profilePositionGroups']
 
-  const positionGroupsUrns = results.find(r => 'data' in r && r.data.$type === COLLECTION_RESPONSE_TYPE && r.data.entityUrn === positionGroupsUrn);
+  const positionGroupsUrns = results.find(r => 'data' in r && r.data.$type === COLLECTION_RESPONSE_TYPE && r.data.entityUrn === positionGroupsUrn) as UrnCollection;
 
-  console.log("PositionGroupUrns: " + JSON.stringify(positionGroupsUrns))
- 
-  return []
+  const positionGroups =  positionGroupsUrns.data.elements.map(urn => {
+    return results
+        .find(r => '$type' in r && r.$type === POSITION_GROUP_TYPE && r.entityUrn === urn) as LinkedInPositionGroup;
+  }).filter(notEmpty);
+
+  return positionGroups
 };
+
+
 
 
 
@@ -55,6 +65,7 @@ export const getProfileFromResponse = ( publicIdentifier: string, response: GetP
     const company = results.find(r => '$type' in r && r.$type === COMPANY_TYPE && profile.headline.includes(r.name)) as LinkedInCompany;
     const pictureUrls = getProfilePictureUrls(get(profile, 'profilePicture.displayImageReference.vectorImage', undefined));
     const positionGroups = getPositionGroupsFromResponse(publicIdentifier, response)
+    console.log("Position Groups: " + positionGroups.map((element) => typeof element))
 
     return {
       ...profile,
