@@ -10,7 +10,7 @@ import { Profile } from '../entities/profile.entity';
 import { GetProfileResponse, UrnCollection } from '../responses';
 import { LinkedInPositionGroup, POSITION_GROUP_TYPE } from '../entities/linkedin-position-group.entity';
 import { COLLECTION_RESPONSE_TYPE } from '../entities/linkedin-collection-response.entity';
-import { LinkedInPosition } from '../entities/linkedin-position.entity';
+import { LinkedInPosition, POSITION_TYPE } from '../entities/linkedin-position.entity';
 
 const getProfilePictureUrls = (picture?: LinkedInVectorImage): string[] =>
   map(picture?.artifacts, artifact => `${picture?.rootUrl}${artifact.fileIdentifyingUrlPathSegment}`);
@@ -61,6 +61,22 @@ export const getPositionGroupsFromResponse = ( publicIdentifier: string, respons
   return positionGroups
 };
 
+export const getPositionsFromResponse = ( publicIdentifier: string, response: GetProfileResponse, positionCollectionUrns: string[] ): LinkedInPosition[] => {
+  const positions: LinkedInPosition[] = []
+
+  const results = response.included || [];
+  positionCollectionUrns.forEach(groupUrn => {
+    const positionUrns = getElementsFromCollectionResponse(response, groupUrn)
+
+    positionUrns.forEach(positionUrn => {
+      const position = results
+      .find(r => '$type' in r && r.$type === POSITION_TYPE && r.entityUrn === positionUrn) as LinkedInPosition;
+      positions.push(position)
+    })
+  });
+  
+  return positions.filter(notEmpty);
+};
 
 
 
@@ -71,9 +87,12 @@ export const getProfileFromResponse = ( publicIdentifier: string, response: GetP
     const profile = results.find(r => '$type' in r && r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
     
     const company = results.find(r => '$type' in r && r.$type === COMPANY_TYPE && profile.headline.includes(r.name)) as LinkedInCompany;
+
     const pictureUrls = getProfilePictureUrls(get(profile, 'profilePicture.displayImageReference.vectorImage', undefined));
+
     const positionGroups: LinkedInPositionGroup[] = getPositionGroupsFromResponse(publicIdentifier, response)
-    const positions: LinkedInPosition[] = []
+    
+    const positions: LinkedInPosition[] = getPositionsFromResponse(publicIdentifier, response, positionGroups.map((group) => group['*profilePositionInPositionGroup']))
 
     return {
       ...profile,

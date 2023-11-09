@@ -42,7 +42,7 @@ describe('getProfile', () => {
     const { response, resultProfile } = createGetProfileResponse();
     const profile = getProfileFromResponse(resultProfile.publicIdentifier, response)
 
-    expect(profile.positions).toHaveLength(3);
+    expect(profile.positions).toHaveLength(9);
     profile.positions.forEach((position: LinkedInPosition) => expect(typeof position['*employmentType']).toEqual('string'));
   });
 });
