@@ -38,27 +38,29 @@ function notEmpty<TValue>(value: TValue | null | undefined): value is TValue {
 }
 
 const getElementsFromCollectionResponse = (response: GetProfileResponse, collectionUrn: string ): string[] => { 
-
   const collection = (response.included ?? []).find(r => 'data' in r && r.data.$type === COLLECTION_RESPONSE_TYPE && r.data.entityUrn === collectionUrn) as UrnCollection;
 
   return collection.data.elements
  }
 
-const getPositionGroupsFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): LinkedInPositionGroup[] => {
-  
+ const getLinkedInProfileFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): LinkedInProfile => {
   const results = response.included || [];
 
-  const profile = results.find(r => '$type' in r && r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
+  return results.find(r => '$type' in r && r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
+};
+
+const getPositionGroupsFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): LinkedInPositionGroup[] => {
+  const profile = getLinkedInProfileFromResponse(publicIdentifier, response)
 
   const positionGroupsUrn = profile['*profilePositionGroups']
 
   const positionGroupsUrns = getElementsFromCollectionResponse(response, positionGroupsUrn)
-
+  const results = response.included || [];
   const positionGroups =  positionGroupsUrns.map(urn => {
     return results
         .find(r => '$type' in r && r.$type === POSITION_GROUP_TYPE && r.entityUrn === urn) as LinkedInPositionGroup;
   }).filter(notEmpty);
-
+  
   return positionGroups
 };
 
@@ -83,7 +85,7 @@ const getSkillsFromResponse = ( publicIdentifier: string, response: GetProfileRe
   
   const results = response.included || [];
 
-  const profile = results.find(r => '$type' in r && r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
+  const profile = getLinkedInProfileFromResponse(publicIdentifier, response)
 
   const collectionUrn = profile['*profileSkills']
 
@@ -100,7 +102,7 @@ const getSkillsFromResponse = ( publicIdentifier: string, response: GetProfileRe
 export const getProfileFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): Profile => {
   const results = response.included || [];
 
-    const profile = results.find(r => '$type' in r && r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
+    const profile = getLinkedInProfileFromResponse(publicIdentifier, response)
     
     const company = results.find(r => '$type' in r && r.$type === COMPANY_TYPE && profile.headline.includes(r.name)) as LinkedInCompany;
 
