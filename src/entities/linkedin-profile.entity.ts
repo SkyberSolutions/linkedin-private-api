@@ -3,19 +3,19 @@ import { LinkedInVectorImage } from './linkedin-vector-image.entity';
 
 export const PROFILE_TYPE = 'com.linkedin.voyager.dash.identity.profile.Profile';
 
-interface LinkedInProfileGeoLocation {
+export interface LinkedInProfileGeoLocation {
   $type: 'com.linkedin.voyager.dash.identity.profile.ProfileGeoLocation';
   '*geo': string;
   $recipeTypes: string[];
   geoUrn: string;
 }
 
-interface LinkedInProfileLocation {
+export interface LinkedInProfileLocation {
   $type: 'com.linkedin.voyager.dash.identity.profile.ProfileLocation';
   countryCode: Country;
 }
 
-interface LinkedInPrimaryLocale {
+export interface LinkedInPrimaryLocale {
   $type: 'com.linkedin.common.Locale';
   $anti_abuse_annotations: {
     attributeId: number;
