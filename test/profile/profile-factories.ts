@@ -5,8 +5,9 @@ import { GetProfileResponse, LinkedInCompany, LinkedInProfile, LinkedInVectorArt
 import { LinkedInMiniProfile } from '../../src/entities/linkedin-mini-profile.entity';
 import { LinkedInPhotoFilterPicture, LinkedInPrimaryLocale, LinkedInProfileGeoLocation, LinkedInProfileLocation } from '../../src/entities/linkedin-profile.entity';
 import { Country } from '../../src/types/country-code.enum';
-import { LinkedInPositionGroup } from 'src/entities/linkedin-position-group.entity';
-import { LinkedInDateRange } from 'src/entities/linkedin-date-range.entity';
+import { LinkedInPositionGroup } from '../../src/entities/linkedin-position-group.entity';
+import { LinkedInDateRange } from '../../src/entities/linkedin-date-range.entity';
+import { LinkedInPosition } from '../../src/entities/linkedin-position.entity';
 
 export const createMiniProfileId = () => `urn:li:fs_miniProfile:${faker.string.uuid()}`;
 
@@ -108,7 +109,7 @@ const createCollectionResponse = (urn: string, count: number):UrnCollection => {
     data: {
       elements: times(count, faker.string.uuid),
       $type: 'com.linkedin.restli.common.CollectionResponse',
-      entityUrn: faker.string.uuid(),
+      entityUrn: urn,
       paging: {
         count: count,
         links: [],
@@ -121,7 +122,45 @@ const createCollectionResponse = (urn: string, count: number):UrnCollection => {
 
 };
 
+const createPositionGroup = (urn: string, companyUrn: string, companyName: string): LinkedInPositionGroup => {
+  return  {
+    $type: 'com.linkedin.voyager.dash.identity.profile.PositionGroup',
+    '*profilePositionInPositionGroup': faker.string.uuid(),
+    dateRange: createLinkedDateRange(),
+    multiLocaleCompanyName: { 'en_US': companyName },
+    companyName: companyName,
+    '*company': companyUrn,
+    companyUrn: companyUrn,
+    $recipeTypes: [],
+    entityUrn: urn,
+  };
+};
 
+const createPosition = (urn: string, companyUrn: string, companyName: string): LinkedInPosition => {
+  const locationName = faker.lorem.words();
+  const title = faker.lorem.words();
+  return  {
+    $type: 'com.linkedin.voyager.dash.identity.profile.Position',
+    dateRange: createLinkedDateRange(),
+    multiLocaleCompanyName: { 'en_US': companyName },
+    companyName: companyName,
+    '*company': companyUrn,
+    title: title,
+    companyUrn: companyUrn,
+    '*employmentType': faker.lorem.word(),
+    employmentTypeUrn: faker.string.uuid(),
+    entityUrn: urn,
+    multiLocaleGeoLocationName: { 'en_US': locationName },
+    shouldShowSourceOfHireBadge: false,
+    locationName: locationName,
+    '*profileTreasuryMediaPosition': faker.string.uuid(),
+    multiLocaleTitle: { 'en_US': title },
+    $recipeTypes: [],
+    geoLocationName: locationName,
+    multiLocaleLocationName: { 'en_US': locationName },
+    sourceOfHireType: faker.lorem.word()
+  };
+};
 
 const createProfile = (count: number): LinkedInProfile[] =>
   times(count, () => {
@@ -202,18 +241,9 @@ export const createGetProfileResponse = () => {
     const companyName = faker.lorem.words();
 
     positionGroup.data.elements.forEach(urn => {
-      positionGroups.push({
-        $type: 'com.linkedin.voyager.dash.identity.profile.PositionGroup',
-        '*profilePositionInPositionGroup': faker.string.uuid(),
-        dateRange: createLinkedDateRange(),
-        multiLocaleCompanyName: {'en_US': companyName },
-        companyName: companyName,
-        '*company': companyUrn,
-        companyUrn: companyUrn,
-        $recipeTypes: [],
-        entityUrn: urn
-      })
-
+        positionGroups.push(
+          createPositionGroup(urn, companyUrn, companyName)
+        )
     });
    
   })
