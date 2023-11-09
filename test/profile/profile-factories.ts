@@ -227,6 +227,10 @@ export const createMiniProfile = (count: number): LinkedInMiniProfile[] =>
 export const createGetProfileResponse = () => {
   const positionGroupCollection: UrnCollection[] = []
   const positionGroups: LinkedInPositionGroup[] = []
+
+  const positionCollections: UrnCollection[] = []
+  const positions: LinkedInPosition[] = []
+
   const profiles = createProfile(10);
 
   profiles.forEach(profile => {
@@ -245,8 +249,21 @@ export const createGetProfileResponse = () => {
           createPositionGroup(urn, companyUrn, companyName)
         )
     });
-   
   })
+
+  positionGroups.forEach(positionGroup => {
+    const collectionUrn = positionGroup['*profilePositionInPositionGroup']
+    const collection = createCollectionResponse(collectionUrn, 3)
+    positionCollections.push(collection)
+
+    collection.data.elements.forEach(urn =>{
+
+      positions.push(
+        createPosition(urn, positionGroup.companyUrn, positionGroup.companyName)
+      )
+    })
+  });
+  
 
   const companies = createCompany(10);
   
@@ -268,7 +285,14 @@ export const createGetProfileResponse = () => {
       },
       metadata: undefined
     },
-    included: [...profiles, ...companies, ...positionGroupCollection, ...positionGroups],
+    included: [
+      ...profiles, 
+      ...companies, 
+      ...positionGroupCollection, 
+      ...positionGroups, 
+      ...positionCollections, 
+      ...positions
+    ],
   };
 
   return { response, resultProfile, resultCompany };
