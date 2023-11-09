@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 import { random, times } from 'lodash';
-import { GetProfileResponse, LinkedInCollectionResponse, LinkedInCompany, LinkedInProfile, LinkedInVectorArtifact, LinkedInVectorImage, UrnCollection } from 'src';
+import { GetProfileResponse, LinkedInCompany, LinkedInProfile, LinkedInVectorArtifact, LinkedInVectorImage, UrnCollection } from 'src';
 
 import { LinkedInMiniProfile } from '../../src/entities/linkedin-mini-profile.entity';
 import { LinkedInPhotoFilterPicture, LinkedInPrimaryLocale, LinkedInProfileGeoLocation, LinkedInProfileLocation } from '../../src/entities/linkedin-profile.entity';
@@ -102,9 +102,9 @@ const createLinkedDateRange = (): LinkedInDateRange => {
   }
 }
 
-export const createPositionGroupCollectionResponse = (count: number) => {
+const createCollectionResponse = (urn: string, count: number):UrnCollection => {
  
-  const response: LinkedInCollectionResponse<string, undefined> = {
+  return {
     data: {
       elements: times(count, faker.string.uuid),
       $type: 'com.linkedin.restli.common.CollectionResponse',
@@ -118,7 +118,7 @@ export const createPositionGroupCollectionResponse = (count: number) => {
     },
     included: []
   }
-return response
+
 };
 
 
@@ -191,7 +191,8 @@ export const createGetProfileResponse = () => {
   const profiles = createProfile(10);
 
   profiles.forEach(profile => {
-    const collection = createPositionGroupCollectionResponse(3)
+    const collectionUrn = faker.string.uuid()
+    const collection = createCollectionResponse(collectionUrn, 3)
     positionGroupCollection.push(collection)
     profile['*profilePositionGroups'] = collection.data.entityUrn
   });
