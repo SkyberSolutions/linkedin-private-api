@@ -3,6 +3,7 @@ import { createGetProfileResponse } from './profile-factories';
 import { getProfileFromResponse } from '../../src/repositories/profile.repository';
 import { LinkedInPositionGroup } from '../../src/entities/linkedin-position-group.entity';
 import { LinkedInPosition } from '../../src/entities/linkedin-position.entity';
+import { LinkedInSkill } from '../../src/entities/linkedin-skill.entity';
 
 describe('getProfile', () => {
   it('should return the correct profile from the response', async () => {
@@ -44,5 +45,14 @@ describe('getProfile', () => {
 
     expect(profile.positions).toHaveLength(9);
     profile.positions.forEach((position: LinkedInPosition) => expect(typeof position['*employmentType']).toEqual('string'));
+  });
+
+
+  it('should populate skills on the result profile', async () => {
+    const { response, resultProfile } = createGetProfileResponse();
+    const profile = getProfileFromResponse(resultProfile.publicIdentifier, response)
+
+    expect(profile.skills).toHaveLength(10);
+    profile.skills.forEach((skill: LinkedInSkill) => expect(typeof skill.name).toEqual('string'));
   });
 });
