@@ -8,6 +8,7 @@ import { Country } from '../../src/types/country-code.enum';
 import { LinkedInPositionGroup, POSITION_GROUP_TYPE } from '../../src/entities/linkedin-position-group.entity';
 import { LinkedInDateRange } from '../../src/entities/linkedin-date-range.entity';
 import { LinkedInPosition, POSITION_TYPE } from '../../src/entities/linkedin-position.entity';
+import { LinkedInSkill } from 'src/entities/linkedin-skill.entity';
 
 export const createMiniProfileId = () => `urn:li:fs_miniProfile:${faker.string.uuid()}`;
 
@@ -162,6 +163,17 @@ const createPosition = (urn: string, companyUrn: string, companyName: string): L
   };
 };
 
+const createSkill = (urn: string): LinkedInSkill => {
+  const name = faker.lorem.words();
+  return  {
+    $type: 'com.linkedin.voyager.dash.identity.profile.Skill',
+    $recipeTypes: [],
+    entityUrn: urn,
+    name: name,
+    multiLocaleName: {'en_US': name}
+  };
+};
+
 const createProfile = (count: number): LinkedInProfile[] =>
   times(count, () => {
     const firstName = faker.person.firstName();
@@ -231,6 +243,9 @@ export const createGetProfileResponse = () => {
   const positionCollections: UrnCollection[] = []
   const positions: LinkedInPosition[] = []
 
+  const skillCollections: UrnCollection[] = []
+  const skills: LinkedInSkill[] = []
+
   const profiles = createProfile(10);
 
   profiles.forEach(profile => {
@@ -263,6 +278,23 @@ export const createGetProfileResponse = () => {
       )
     })
   });
+
+  profiles.forEach(profile => {
+    const collectionUrn = faker.string.uuid()
+    const collection = createCollectionResponse(collectionUrn, 10)
+    skillCollections.push(collection)
+    profile['*profileSkills'] = collection.data.entityUrn
+  });
+
+  skillCollections.forEach(skillCollection => {
+  
+    skillCollection.data.elements.forEach(urn => {
+        skills.push(
+          createSkill(urn)
+        )
+    });
+  })
+
   
 
   const companies = createCompany(10);
@@ -291,7 +323,9 @@ export const createGetProfileResponse = () => {
       ...positionGroupCollection, 
       ...positionGroups, 
       ...positionCollections, 
-      ...positions
+      ...positions,
+      ...skillCollections, 
+      ...skills
     ],
   };
 

@@ -3,6 +3,7 @@ import { LinkedInCollectionResponse } from '../entities/linkedin-collection-resp
 import { LinkedInCompany } from '../entities/linkedin-company.entity';
 import { LinkedInProfile, ProfileUrn } from '../entities/linkedin-profile.entity';
 import { LinkedInPosition } from '../entities/linkedin-position.entity';
+import { LinkedInSkill } from 'src/entities/linkedin-skill.entity';
 
 export type UrnCollection = LinkedInCollectionResponse<string, undefined>;
 
@@ -12,5 +13,6 @@ export type GetProfileResponse = LinkedInCollectionResponse<
                                                             LinkedInCompany |
                                                             LinkedInPositionGroup |
                                                             LinkedInPosition |
+                                                            LinkedInSkill |
                                                             UrnCollection
                                                             >;
