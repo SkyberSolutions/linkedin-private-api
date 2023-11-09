@@ -6,6 +6,7 @@ export const POSITION_GROUP_TYPE = 'com.linkedin.voyager.dash.identity.profile.P
 
 export interface LinkedInPositionGroup {
     $type: typeof POSITION_GROUP_TYPE;
+    '*profilePositionInPositionGroup': string;
     dateRange: LinkedInDateRange;
     multiLocaleCompanyName: Record<string, string>;
     companyName: string;

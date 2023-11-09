@@ -203,6 +203,7 @@ export const createGetProfileResponse = () => {
     positionGroup.data.elements.forEach(urn => {
       positionGroups.push({
         $type: 'com.linkedin.voyager.dash.identity.profile.PositionGroup',
+        '*profilePositionInPositionGroup': faker.string.uuid(),
         dateRange: createLinkedDateRange(),
         multiLocaleCompanyName: {'en_US': companyName },
         companyName: companyName,

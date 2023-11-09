@@ -10,6 +10,7 @@ import { Profile } from '../entities/profile.entity';
 import { GetProfileResponse, UrnCollection } from '../responses';
 import { LinkedInPositionGroup, POSITION_GROUP_TYPE } from '../entities/linkedin-position-group.entity';
 import { COLLECTION_RESPONSE_TYPE } from '../entities/linkedin-collection-response.entity';
+import { LinkedInPosition } from '../entities/linkedin-position.entity';
 
 const getProfilePictureUrls = (picture?: LinkedInVectorImage): string[] =>
   map(picture?.artifacts, artifact => `${picture?.rootUrl}${artifact.fileIdentifyingUrlPathSegment}`);
@@ -35,6 +36,13 @@ function notEmpty<TValue>(value: TValue | null | undefined): value is TValue {
   return value !== null && value !== undefined;
 }
 
+const getElementsFromCollectionResponse = (response: GetProfileResponse, collectionUrn: string ): string[] => { 
+
+  const collection = (response.included ?? []).find(r => 'data' in r && r.data.$type === COLLECTION_RESPONSE_TYPE && r.data.entityUrn === collectionUrn) as UrnCollection;
+
+  return collection.data.elements
+ }
+
 export const getPositionGroupsFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): LinkedInPositionGroup[] => {
   
   const results = response.included || [];
@@ -43,9 +51,9 @@ export const getPositionGroupsFromResponse = ( publicIdentifier: string, respons
 
   const positionGroupsUrn = profile['*profilePositionGroups']
 
-  const positionGroupsUrns = results.find(r => 'data' in r && r.data.$type === COLLECTION_RESPONSE_TYPE && r.data.entityUrn === positionGroupsUrn) as UrnCollection;
+  const positionGroupsUrns = getElementsFromCollectionResponse(response, positionGroupsUrn)
 
-  const positionGroups =  positionGroupsUrns.data.elements.map(urn => {
+  const positionGroups =  positionGroupsUrns.map(urn => {
     return results
         .find(r => '$type' in r && r.$type === POSITION_GROUP_TYPE && r.entityUrn === urn) as LinkedInPositionGroup;
   }).filter(notEmpty);
@@ -64,14 +72,15 @@ export const getProfileFromResponse = ( publicIdentifier: string, response: GetP
     
     const company = results.find(r => '$type' in r && r.$type === COMPANY_TYPE && profile.headline.includes(r.name)) as LinkedInCompany;
     const pictureUrls = getProfilePictureUrls(get(profile, 'profilePicture.displayImageReference.vectorImage', undefined));
-    const positionGroups = getPositionGroupsFromResponse(publicIdentifier, response)
-    console.log("Position Groups: " + positionGroups.map((element) => typeof element))
+    const positionGroups: LinkedInPositionGroup[] = getPositionGroupsFromResponse(publicIdentifier, response)
+    const positions: LinkedInPosition[] = []
 
     return {
       ...profile,
       company,
       pictureUrls,
-      positionGroups
+      positionGroups,
+      positions
     };
 };
 
