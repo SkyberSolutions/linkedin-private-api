@@ -7,12 +7,12 @@ import { LinkedInSkill } from 'src/entities/linkedin-skill.entity';
 
 export type UrnCollection = LinkedInCollectionResponse<string, undefined>;
 
-export type GetProfileResponse = LinkedInCollectionResponse<
-                                                            ProfileUrn, 
-                                                            LinkedInProfile | 
-                                                            LinkedInCompany |
-                                                            LinkedInPositionGroup |
-                                                            LinkedInPosition |
-                                                            LinkedInSkill |
-                                                            UrnCollection
-                                                            >;
+export type ProfileResponseEntityTypes = LinkedInProfile | 
+LinkedInCompany |
+LinkedInPositionGroup |
+LinkedInPosition |
+LinkedInSkill
+
+export type ProfileResponseTypes = ProfileResponseEntityTypes | UrnCollection;
+
+export type GetProfileResponse = LinkedInCollectionResponse<ProfileUrn, ProfileResponseTypes>;
