@@ -2,12 +2,12 @@ import { faker } from '@faker-js/faker';
 import { random, times } from 'lodash';
 import { GetProfileResponse, LinkedInCompany, LinkedInProfile, LinkedInVectorArtifact, LinkedInVectorImage, UrnCollection } from 'src';
 
-import { LinkedInMiniProfile } from '../../src/entities/linkedin-mini-profile.entity';
-import { LinkedInPhotoFilterPicture, LinkedInPrimaryLocale, LinkedInProfileGeoLocation, LinkedInProfileLocation } from '../../src/entities/linkedin-profile.entity';
+import { LinkedInMiniProfile, MINI_PROFILE_TYPE } from '../../src/entities/linkedin-mini-profile.entity';
+import { LinkedInPhotoFilterPicture, LinkedInPrimaryLocale, LinkedInProfileGeoLocation, LinkedInProfileLocation, PROFILE_TYPE } from '../../src/entities/linkedin-profile.entity';
 import { Country } from '../../src/types/country-code.enum';
-import { LinkedInPositionGroup } from '../../src/entities/linkedin-position-group.entity';
+import { LinkedInPositionGroup, POSITION_GROUP_TYPE } from '../../src/entities/linkedin-position-group.entity';
 import { LinkedInDateRange } from '../../src/entities/linkedin-date-range.entity';
-import { LinkedInPosition } from '../../src/entities/linkedin-position.entity';
+import { LinkedInPosition, POSITION_TYPE } from '../../src/entities/linkedin-position.entity';
 
 export const createMiniProfileId = () => `urn:li:fs_miniProfile:${faker.string.uuid()}`;
 
@@ -124,7 +124,7 @@ const createCollectionResponse = (urn: string, count: number):UrnCollection => {
 
 const createPositionGroup = (urn: string, companyUrn: string, companyName: string): LinkedInPositionGroup => {
   return  {
-    $type: 'com.linkedin.voyager.dash.identity.profile.PositionGroup',
+    $type: POSITION_GROUP_TYPE,
     '*profilePositionInPositionGroup': faker.string.uuid(),
     dateRange: createLinkedDateRange(),
     multiLocaleCompanyName: { 'en_US': companyName },
@@ -140,7 +140,7 @@ const createPosition = (urn: string, companyUrn: string, companyName: string): L
   const locationName = faker.lorem.words();
   const title = faker.lorem.words();
   return  {
-    $type: 'com.linkedin.voyager.dash.identity.profile.Position',
+    $type: POSITION_TYPE,
     dateRange: createLinkedDateRange(),
     multiLocaleCompanyName: { 'en_US': companyName },
     companyName: companyName,
@@ -168,7 +168,7 @@ const createProfile = (count: number): LinkedInProfile[] =>
     const lastName = faker.person.lastName();
     const headline = faker.lorem.word();
     return {
-    $type: 'com.linkedin.voyager.dash.identity.profile.Profile',
+    $type: PROFILE_TYPE,
     '*industry': faker.string.uuid(),
     '*profileCertifications': faker.string.uuid(),
     '*profileCourses': faker.string.uuid(),
@@ -212,7 +212,7 @@ const createProfile = (count: number): LinkedInProfile[] =>
 
 export const createMiniProfile = (count: number): LinkedInMiniProfile[] =>
   times(count, () => ({
-    $type: 'com.linkedin.voyager.identity.shared.MiniProfile',
+    $type: MINI_PROFILE_TYPE,
     trackingId: faker.string.uuid(),
     firstName: faker.lorem.words(),
     lastName: faker.lorem.words(),
