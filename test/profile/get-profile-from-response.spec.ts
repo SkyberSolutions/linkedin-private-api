@@ -15,14 +15,6 @@ describe('getProfile', () => {
     expect(difference(Object.keys(resultProfile), Object.keys(profile)).length).toEqual(0);
   });
 
-  it('should populate company on the result profile', async () => {
-    const { response, resultProfile, resultCompany } = createGetProfileResponse();
-    
-    const profile = getProfileFromResponse(resultProfile.publicIdentifier, response)
-
-    expect(profile.company).toEqual(resultCompany);
-  });
-
   it('should populate profile picture urls on the result profile', async () => {
     const { response, resultProfile } = createGetProfileResponse();
     const profile = getProfileFromResponse(resultProfile.publicIdentifier, response)

@@ -1,7 +1,6 @@
 import { filter, get, keyBy, map } from 'lodash';
 
 import { Client } from '../core/client';
-import { COMPANY_TYPE, LinkedInCompany } from '../entities/linkedin-company.entity';
 import { LinkedInMiniProfile, MINI_PROFILE_TYPE } from '../entities/linkedin-mini-profile.entity';
 import { LinkedInProfile, PROFILE_TYPE } from '../entities/linkedin-profile.entity';
 import { LinkedInVectorImage } from '../entities/linkedin-vector-image.entity';
@@ -119,12 +118,8 @@ const getEducationsFromResponse = ( publicIdentifier: string, response: GetProfi
 };
 
 export const getProfileFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): Profile => {
-  const results = response.included || [];
-
-    const profile = getLinkedInProfileFromResponse(publicIdentifier, response)
+  const profile = getLinkedInProfileFromResponse(publicIdentifier, response)
     
-    const company = results.find(r => '$type' in r && r.$type === COMPANY_TYPE && profile.headline.includes(r.name)) as LinkedInCompany;
-
     const pictureUrls = getProfilePictureUrls(get(profile, 'profilePicture.displayImageReference.vectorImage', undefined));
 
     const positionGroups: LinkedInPositionGroup[] = getPositionGroupsFromResponse(publicIdentifier, response)
@@ -137,7 +132,6 @@ export const getProfileFromResponse = ( publicIdentifier: string, response: GetP
 
     return {
       ...profile,
-      company,
       pictureUrls,
       positionGroups,
       positions,

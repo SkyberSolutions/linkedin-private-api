@@ -354,10 +354,6 @@ export const createGetProfileResponse = () => {
   
   const resultProfile = profiles[random(0, 9)];
 
-  const resultCompany = companies[random(0, 9)];
-
-  resultProfile.headline = `${faker.random.word} at ${resultCompany.name}`;
-
   const response: GetProfileResponse = {
     data: {
       elements: times(3, faker.string.uuid),
@@ -384,7 +380,7 @@ export const createGetProfileResponse = () => {
     ],
   };
 
-  return { response, resultProfile, resultCompany };
+  return { response, resultProfile };
 };
 
 export const createGetOwnProfileResponse = () => {
