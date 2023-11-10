@@ -227,6 +227,7 @@ const createProfile = (count: number): LinkedInProfile[] =>
     const firstName = faker.person.firstName();
     const lastName = faker.person.lastName();
     const headline = faker.lorem.word();
+    const summary = faker.lorem.words();
     return {
     $type: PROFILE_TYPE,
     '*industry': faker.string.uuid(),
@@ -259,11 +260,14 @@ const createProfile = (count: number): LinkedInProfile[] =>
     multiLocaleFirstName: {"en_US": firstName},
     multiLocaleHeadline: {"en_US": headline},
     multiLocaleLastName: {"en_US": lastName},
+    multiLocaleSummary: {"en_US": summary},
     objectUrn: faker.string.uuid(),
     primaryLocale: createLinkedInPrimaryLocale(),
     profilePicture: createProfilePicture(1)[0],
+    backgroundPicture: createProfilePicture(1)[0],
     publicIdentifier: faker.string.uuid(),
     supportedLocales: [],
+    summary: summary,
     trackingId: faker.string.uuid(),
     versionTag: faker.string.uuid(),
   };
