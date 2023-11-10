@@ -12,6 +12,7 @@ import { LinkedInPositionGroup, POSITION_GROUP_TYPE } from '../entities/linkedin
 import { COLLECTION_RESPONSE_TYPE } from '../entities/linkedin-collection-response.entity';
 import { LinkedInPosition, POSITION_TYPE } from '../entities/linkedin-position.entity';
 import { LinkedInSkill, SKILL_TYPE } from '../entities/linkedin-skill.entity';
+import { EDUCATION_TYPE, LinkedInEducation } from '../entities/linkedin-education.entity';
 
 const getProfilePictureUrls = (picture?: LinkedInVectorImage): string[] =>
   map(picture?.artifacts, artifact => `${picture?.rootUrl}${artifact.fileIdentifyingUrlPathSegment}`);
@@ -99,6 +100,24 @@ const getSkillsFromResponse = ( publicIdentifier: string, response: GetProfileRe
   return skills
 };
 
+const getEducationsFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): LinkedInEducation[] => {
+  
+  const results = response.included || [];
+
+  const profile = getLinkedInProfileFromResponse(publicIdentifier, response)
+
+  const collectionUrn = profile['*profileEducations']
+
+  const elementUrns = getElementsFromCollectionResponse(response, collectionUrn)
+
+  const educations =  elementUrns.map(urn => {
+    return results
+        .find(r => '$type' in r && r.$type === EDUCATION_TYPE && r.entityUrn === urn) as LinkedInEducation;
+  }).filter(notEmpty);
+
+  return educations
+};
+
 export const getProfileFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): Profile => {
   const results = response.included || [];
 
@@ -114,13 +133,16 @@ export const getProfileFromResponse = ( publicIdentifier: string, response: GetP
 
     const skills: LinkedInSkill[] = getSkillsFromResponse(publicIdentifier, response)
 
+    const educations: LinkedInEducation[] = getEducationsFromResponse(publicIdentifier, response)
+
     return {
       ...profile,
       company,
       pictureUrls,
       positionGroups,
       positions,
-      skills
+      skills,
+      educations
     };
 };
 

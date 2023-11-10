@@ -8,7 +8,8 @@ import { Country } from '../../src/types/country-code.enum';
 import { LinkedInPositionGroup, POSITION_GROUP_TYPE } from '../../src/entities/linkedin-position-group.entity';
 import { LinkedInDateRange } from '../../src/entities/linkedin-date-range.entity';
 import { LinkedInPosition, POSITION_TYPE } from '../../src/entities/linkedin-position.entity';
-import { LinkedInSkill } from 'src/entities/linkedin-skill.entity';
+import { LinkedInSkill } from '../../src/entities/linkedin-skill.entity';
+import { EDUCATION_TYPE, LinkedInEducation } from '../../src/entities/linkedin-education.entity';
 
 export const createMiniProfileId = () => `urn:li:fs_miniProfile:${faker.string.uuid()}`;
 
@@ -174,6 +175,39 @@ const createSkill = (urn: string): LinkedInSkill => {
   };
 };
 
+const createEducation = (urn: string): LinkedInEducation => {
+  const companyUrn = faker.string.uuid();
+  const schoolUrn = faker.string.uuid();
+  const schoolName = faker.lorem.words();
+  const fieldOfStudy = faker.lorem.words();
+  const degreeName = faker.lorem.word();
+  return  {
+    dateRange: createLinkedDateRange(),
+    description: null,
+    "*company": companyUrn,
+    "*profileTreasuryMediaEducation": faker.string.uuid(),
+    companyUrn: companyUrn,
+    schoolUrn: schoolUrn,
+    entityUrn: urn,
+    standardizedFieldOfStudyUrn: null,
+    schoolName: schoolName,
+    fieldOfStudy: fieldOfStudy,
+    degreeName: degreeName,
+    multiLocaleGrade: null,
+    $recipeTypes: [],
+    multiLocaleSchoolName: {'en_US': schoolName},
+    $type: EDUCATION_TYPE,
+    multiLocaleActivities: null,
+    activities: null,
+    grade: null,
+    "*school": schoolUrn,
+    multiLocaleFieldOfStudy: {'en_US': fieldOfStudy},
+    multiLocaleDescription: null,
+    multiLocaleDegreeName: {'en_US': degreeName},
+    degreeUrn: null
+  };
+};
+
 const createProfile = (count: number): LinkedInProfile[] =>
   times(count, () => {
     const firstName = faker.person.firstName();
@@ -246,6 +280,9 @@ export const createGetProfileResponse = () => {
   const skillCollections: UrnCollection[] = []
   const skills: LinkedInSkill[] = []
 
+  const educationCollections: UrnCollection[] = []
+  const educations: LinkedInEducation[] = []
+
   const profiles = createProfile(10);
 
   profiles.forEach(profile => {
@@ -279,6 +316,7 @@ export const createGetProfileResponse = () => {
     })
   });
 
+  // SKILLS
   profiles.forEach(profile => {
     const collectionUrn = faker.string.uuid()
     const collection = createCollectionResponse(collectionUrn, 10)
@@ -295,7 +333,22 @@ export const createGetProfileResponse = () => {
     });
   })
 
+  // EDUCATIONS
+  profiles.forEach(profile => {
+    const collectionUrn = faker.string.uuid()
+    const collection = createCollectionResponse(collectionUrn, 2)
+    educationCollections.push(collection)
+    profile['*profileEducations'] = collection.data.entityUrn
+  });
+
+  educationCollections.forEach(educationCollection => {
   
+    educationCollection.data.elements.forEach(urn => {
+        educations.push(
+          createEducation(urn)
+        )
+    });
+  })
 
   const companies = createCompany(10);
   
@@ -325,7 +378,9 @@ export const createGetProfileResponse = () => {
       ...positionCollections, 
       ...positions,
       ...skillCollections, 
-      ...skills
+      ...skills,
+      ...educationCollections,
+      ...educations
     ],
   };
 
