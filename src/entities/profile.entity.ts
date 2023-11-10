@@ -1,3 +1,4 @@
+import { LinkedInCompany } from './linkedin-company.entity';
 import { LinkedInEducation } from './linkedin-education.entity';
 import { LinkedInPositionGroup } from './linkedin-position-group.entity';
 import { LinkedInPosition } from './linkedin-position.entity';
@@ -10,4 +11,5 @@ export interface Profile extends LinkedInProfile {
   positions: LinkedInPosition[];
   skills: LinkedInSkill[];
   educations: LinkedInEducation[]
+  companies: LinkedInCompany[]
 }

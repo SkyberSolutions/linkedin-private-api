@@ -10,6 +10,7 @@ import { LinkedInDateRange } from '../../src/entities/linkedin-date-range.entity
 import { LinkedInPosition, POSITION_TYPE } from '../../src/entities/linkedin-position.entity';
 import { LinkedInSkill } from '../../src/entities/linkedin-skill.entity';
 import { EDUCATION_TYPE, LinkedInEducation } from '../../src/entities/linkedin-education.entity';
+import { LinkedInIntegerRange } from '../../src/entities/linkedin-integer-range.entity';
 
 export const createMiniProfileId = () => `urn:li:fs_miniProfile:${faker.string.uuid()}`;
 
@@ -27,22 +28,6 @@ const createVectorImage = (count: number): LinkedInVectorImage[] =>
     $type: 'com.linkedin.common.VectorImage',
     artifacts: createVectorArtifact(4),
     rootUrl: faker.internet.url(),
-  }));
-
-const createCompany = (count: number): LinkedInCompany[] =>
-  times(count, () => ({
-    $type: 'com.linkedin.voyager.dash.organization.Company',
-    $anti_abuse_annotations: [{ attributeId: faker.number.int(), entityId: faker.number.int() }],
-    $recipeTypes: [faker.lorem.word()],
-    entityUrn: faker.string.uuid(),
-    industry: { [faker.string.uuid()]: faker.lorem.word() },
-    industryUrns: [faker.string.uuid()],
-    logo: {
-      vetorImage: createVectorImage(1)[0],
-    },
-    name: faker.person.firstName(),
-    universalName: faker.person.firstName(),
-    url: faker.internet.url(),
   }));
 
 const createProfilePicture = (count: number): LinkedInPhotoFilterPicture[] =>
@@ -102,6 +87,17 @@ const createLinkedDateRange = (): LinkedInDateRange => {
       $recipeTypes: [],
       $type: 'com.linkedin.common.Date'
     }
+  }
+}
+
+const createLinkedIntegerRange = (): LinkedInIntegerRange => {
+  const startNumber = faker.number.int()
+  const endNumber = faker.number.int({min: startNumber + 1})
+  return {
+    start: startNumber,
+    end: endNumber,
+    $recipeTypes: [],
+    $type: 'com.linkedin.voyager.dash.deco.common.IntegerRange'
   }
 }
 
@@ -207,6 +203,24 @@ const createEducation = (urn: string): LinkedInEducation => {
     degreeUrn: null
   };
 };
+
+const createCompany = (urn: string): LinkedInCompany => {
+  const name = faker.lorem.words();
+  return {
+    $type: 'com.linkedin.voyager.dash.organization.Company',
+    $anti_abuse_annotations: [{ attributeId: faker.number.int(), entityId: faker.number.int() }],
+    $recipeTypes: [faker.lorem.word()],
+    entityUrn: urn,
+    employeeCountRange: createLinkedIntegerRange(),
+    industry: { [faker.string.uuid()]: faker.lorem.word() },
+    industryUrns: [faker.string.uuid()],
+    logo: {
+      vetorImage: createVectorImage(1)[0],
+    },
+    name: name,
+    universalName: name,
+    url: faker.internet.url(),
+  }};
 
 const createProfile = (count: number): LinkedInProfile[] =>
   times(count, () => {
@@ -350,7 +364,14 @@ export const createGetProfileResponse = () => {
     });
   })
 
-  const companies = createCompany(10);
+  const companyUrns = [
+    ...positionGroups.map(positionGroup => positionGroup.companyUrn),
+    ...educations.map(education => education.companyUrn)
+  ]
+
+  const companies: LinkedInCompany[] = companyUrns.map (urn => {
+    return createCompany(urn)
+  })
   
   const resultProfile = profiles[random(0, 9)];
 
@@ -376,7 +397,8 @@ export const createGetProfileResponse = () => {
       ...skillCollections, 
       ...skills,
       ...educationCollections,
-      ...educations
+      ...educations,
+      ...companies
     ],
   };
 

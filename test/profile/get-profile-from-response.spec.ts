@@ -5,6 +5,7 @@ import { LinkedInPositionGroup } from '../../src/entities/linkedin-position-grou
 import { LinkedInPosition } from '../../src/entities/linkedin-position.entity';
 import { LinkedInSkill } from '../../src/entities/linkedin-skill.entity';
 import { LinkedInEducation } from '../../src/entities/linkedin-education.entity';
+import { LinkedInCompany } from 'src/entities/linkedin-company.entity';
 
 describe('getProfile', () => {
   it('should return the correct profile from the response', async () => {
@@ -55,5 +56,14 @@ describe('getProfile', () => {
 
     expect(profile.educations).toHaveLength(2);
     profile.educations.forEach((education: LinkedInEducation) => expect(typeof education.schoolName).toEqual('string'));
+  });
+
+  it('should populate companies on the result profile', async () => {
+    const { response, resultProfile } = createGetProfileResponse();
+    const profile = getProfileFromResponse(resultProfile.publicIdentifier, response)
+
+    //Sum of position groups + educations
+    expect(profile.companies).toHaveLength(5);
+    profile.companies.forEach((company: LinkedInCompany) => expect(typeof company.name).toEqual('string'));
   });
 });
