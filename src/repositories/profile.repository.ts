@@ -168,6 +168,8 @@ export class ProfileRepository {
   }
 
   async getProfile({ publicIdentifier }: { publicIdentifier: string }): Promise<Profile> {
+
+    
     const response = await this.client.request.profile.getProfile({ publicIdentifier });
 
     const profile = getProfileFromResponse(publicIdentifier, response)

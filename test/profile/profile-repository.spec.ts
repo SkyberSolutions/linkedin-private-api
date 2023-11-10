@@ -76,4 +76,28 @@ describe('getOwnProfile', () => {
     expect(profile).toBe(null);
     verify(axios.get(getProfileRequestUrl), { ignoreExtraArgs: true, times: 0 });
   });
+
+
+  it('should map core profile fields', async () => {
+    const { response: miniProfileResponse, resultProfile: resultMiniProfile } = createGetOwnProfileResponse();
+    const { response: profileResponse, resultProfile } = createGetProfileResponse();
+    const reqParams = {
+      q: 'memberIdentity',
+      memberIdentity: resultMiniProfile.publicIdentifier,
+      decorationId: 'com.linkedin.voyager.dash.deco.identity.profile.FullProfileWithEntities-35',
+    };
+
+    resultProfile.publicIdentifier = resultMiniProfile.publicIdentifier;
+
+    when(axios.get(requestUrl, undefined)).thenResolve({ data: miniProfileResponse });
+    when(axios.get(getProfileRequestUrl, { params: reqParams })).thenResolve({ data: profileResponse });
+
+    const client = new Client();
+    await client.login.userPass({ username, password });
+    const profile = await client.profile.getOwnProfile();
+    const result = client.mappers.profile.profileToJson(profile)
+
+    expect(result.first_name).toEqual(resultProfile.firstName);
+    expect(result.full_name).toEqual(resultProfile.firstName + " " + resultProfile.lastName);
+  });
 });

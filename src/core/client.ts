@@ -9,6 +9,7 @@ import {
 } from '../repositories';
 import { LinkedInRequest } from './linkedin-request';
 import { Login } from './login';
+import { ProfileMapper } from '../mappers';
 
 interface ClientOpts {
   proxy?: AxiosProxyConfig;
@@ -32,4 +33,8 @@ export class Client {
   conversation = new ConversationRepository({ client: this });
 
   message = new MessageRepository({ client: this });
+
+  mappers = {
+    profile: new ProfileMapper()
+  }
 }
