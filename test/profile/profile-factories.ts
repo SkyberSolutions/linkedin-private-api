@@ -104,7 +104,6 @@ const createLinkedIntegerRange = (): LinkedInIntegerRange => {
 const createCollectionResponse = (urn: string, count: number):UrnCollection => {
  
   return {
-    data: {
       elements: times(count, faker.string.uuid),
       $type: 'com.linkedin.restli.common.CollectionResponse',
       entityUrn: urn,
@@ -114,10 +113,7 @@ const createCollectionResponse = (urn: string, count: number):UrnCollection => {
         start: 0
       },
       metadata: undefined
-    },
-    included: []
-  }
-
+    }
 };
 
 const createPositionGroup = (urn: string, companyUrn: string, companyName: string): LinkedInPositionGroup => {
@@ -307,14 +303,14 @@ export const createGetProfileResponse = () => {
     const collectionUrn = faker.string.uuid()
     const collection = createCollectionResponse(collectionUrn, 3)
     positionGroupCollection.push(collection)
-    profile['*profilePositionGroups'] = collection.data.entityUrn
+    profile['*profilePositionGroups'] = collection.entityUrn
   });
 
   positionGroupCollection.forEach(positionGroup => {
     const companyUrn = faker.string.uuid();
     const companyName = faker.lorem.words();
 
-    positionGroup.data.elements.forEach(urn => {
+    positionGroup.elements.forEach(urn => {
         positionGroups.push(
           createPositionGroup(urn, companyUrn, companyName)
         )
@@ -326,7 +322,7 @@ export const createGetProfileResponse = () => {
     const collection = createCollectionResponse(collectionUrn, 3)
     positionCollections.push(collection)
 
-    collection.data.elements.forEach(urn =>{
+    collection.elements.forEach(urn =>{
 
       positions.push(
         createPosition(urn, positionGroup.companyUrn, positionGroup.companyName)
@@ -339,12 +335,12 @@ export const createGetProfileResponse = () => {
     const collectionUrn = faker.string.uuid()
     const collection = createCollectionResponse(collectionUrn, 10)
     skillCollections.push(collection)
-    profile['*profileSkills'] = collection.data.entityUrn
+    profile['*profileSkills'] = collection.entityUrn
   });
 
   skillCollections.forEach(skillCollection => {
   
-    skillCollection.data.elements.forEach(urn => {
+    skillCollection.elements.forEach(urn => {
         skills.push(
           createSkill(urn)
         )
@@ -356,12 +352,12 @@ export const createGetProfileResponse = () => {
     const collectionUrn = faker.string.uuid()
     const collection = createCollectionResponse(collectionUrn, 2)
     educationCollections.push(collection)
-    profile['*profileEducations'] = collection.data.entityUrn
+    profile['*profileEducations'] = collection.entityUrn
   });
 
   educationCollections.forEach(educationCollection => {
   
-    educationCollection.data.elements.forEach(urn => {
+    educationCollection.elements.forEach(urn => {
         educations.push(
           createEducation(urn)
         )
