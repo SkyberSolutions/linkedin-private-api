@@ -6,6 +6,8 @@ export class ProfileMapper {
 
     profileToJson(input: Profile): ProfileJSON {
 
+        
+
         const output: ProfileJSON = {
             public_identifier: input.publicIdentifier,
             profile_pic_url: null,
@@ -15,7 +17,7 @@ export class ProfileMapper {
             full_name: input.firstName + " " + input.lastName,
             occupation: "",
             headline: input.headline,
-            summary: "",
+            summary: input.summary,
             country: "",
             country_full_name: "",
             city: "",
