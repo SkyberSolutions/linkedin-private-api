@@ -8,7 +8,7 @@ import { MiniProfile, ProfileId } from '../entities/mini-profile.entity';
 import { Profile } from '../entities/profile.entity';
 import { GetProfileResponse, UrnCollection } from '../responses';
 import { LinkedInPositionGroup, POSITION_GROUP_TYPE } from '../entities/linkedin-position-group.entity';
-import { COLLECTION_RESPONSE_TYPE } from '../entities/linkedin-collection-response.entity';
+import { COLLECTION_RESPONSE_TYPE } from '../entities/linkedin-collection.entity';
 import { LinkedInPosition, POSITION_TYPE } from '../entities/linkedin-position.entity';
 import { LinkedInSkill, SKILL_TYPE } from '../entities/linkedin-skill.entity';
 import { EDUCATION_TYPE, LinkedInEducation } from '../entities/linkedin-education.entity';
