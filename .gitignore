@@ -7,3 +7,4 @@ sessions.json
 coverage
 .idea/
 test/profile/exampleGetProfileResponse.json
+test/mapper/profile.mapper.example.spec.ts
