@@ -133,11 +133,13 @@ const createPositionGroup = (urn: string, companyUrn: string, companyName: strin
 const createPosition = (urn: string, companyUrn: string, companyName: string): LinkedInPosition => {
   const locationName = faker.lorem.words();
   const title = faker.lorem.words();
+  const description = faker.lorem.paragraph();
   return  {
     $type: POSITION_TYPE,
     dateRange: createLinkedDateRange(),
     multiLocaleCompanyName: { 'en_US': companyName },
     companyName: companyName,
+    description: description,
     '*company': companyUrn,
     title: title,
     companyUrn: companyUrn,
@@ -145,6 +147,7 @@ const createPosition = (urn: string, companyUrn: string, companyName: string): L
     employmentTypeUrn: faker.string.uuid(),
     entityUrn: urn,
     multiLocaleGeoLocationName: { 'en_US': locationName },
+    multiLocaleDescription: { 'en_US': description },
     shouldShowSourceOfHireBadge: false,
     locationName: locationName,
     '*profileTreasuryMediaPosition': faker.string.uuid(),
