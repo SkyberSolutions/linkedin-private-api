@@ -8,6 +8,7 @@ interface Paging {
 
 export interface LinkedInCollection<T, M = undefined> {
   elements: T[];
+  '*elements'?: T[];
   $type: typeof COLLECTION_RESPONSE_TYPE;
   entityUrn: string;
   paging: Paging;

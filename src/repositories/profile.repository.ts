@@ -41,7 +41,7 @@ function notEmpty<TValue>(value: TValue | null | undefined): value is TValue {
 const getElementsFromCollectionResponse = (response: GetProfileResponse, collectionUrn: string ): string[] => { 
   const collection = (response.included ?? []).find(r => r.$type === COLLECTION_RESPONSE_TYPE && r.entityUrn === collectionUrn) as UrnCollection;
 
-  return collection.elements
+  return collection['*elements'] ?? collection.elements
  }
 
  const getLinkedInProfileFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): LinkedInProfile => {
