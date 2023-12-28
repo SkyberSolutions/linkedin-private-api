@@ -1,6 +1,44 @@
 import { Profile } from "src/entities";
-import { ProfileJSON } from "./profile.json";
+import { Education, Experience, ProfileJSON } from "./profile.json";
+import { LinkedInDate } from "src/entities/linkedin-date.entity";
 
+function dateFromLinkedinDate(input: LinkedInDate | undefined) {
+    if (input === undefined) return null
+    return {
+        day: undefined,
+        month: input.month,
+        year: input.year
+    }
+}
+
+function getExperiences(input: Profile): Experience[] {
+    return input.positions.map ((position) => {
+        return {
+            starts_at: dateFromLinkedinDate(position.dateRange.start)!,
+            ends_at: dateFromLinkedinDate(position.dateRange.end),
+            company: position.companyName,
+            company_linkedin_profile_url: "",
+            title: position.title,
+            description: position.description,
+            location: position.locationName,
+            logo_url: null
+        }
+    })
+}
+
+function getEducations(input: Profile): Education[] {
+    return input.educations.map ((education) => {
+        return {
+            starts_at: dateFromLinkedinDate(education.dateRange.start)!,
+            ends_at: dateFromLinkedinDate(education.dateRange.end),
+            field_of_study: education.fieldOfStudy,
+            degree_name: education.degreeName,
+            school: education.schoolName,
+            description: education.description,
+            logo_url: null
+        }
+    })
+}
 
 export class ProfileMapper {
 
@@ -10,7 +48,7 @@ export class ProfileMapper {
 
         const output: ProfileJSON = {
             public_identifier: input.publicIdentifier,
-            profile_pic_url: null,
+            profile_pic_url: input.pictureUrls.reduce((prev, current) => (prev.width > current.width) ? prev : current).url,
             background_cover_image_url: null,
             first_name: input.firstName,
             last_name: input.lastName,
@@ -22,11 +60,10 @@ export class ProfileMapper {
             country_full_name: "",
             city: "",
             state: "",
-            experiences: [],
-            education: []
+            experiences: getExperiences(input),
+            education: getEducations(input)
         }
     
         return output
       }
-
 }

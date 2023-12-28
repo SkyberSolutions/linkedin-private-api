@@ -1,14 +1,14 @@
 // REFERENCE: https://nubela.co/proxycurl/linkedin
 
-export interface Date {
-    day: number;
+export interface ProfileDate {
+    day: number | undefined;
     month: number;
     year: number;
 }
 
 export interface Experience {
-    starts_at: Date;
-    ends_at: Date;
+    starts_at: ProfileDate;
+    ends_at: ProfileDate | null;
     company: string;
     company_linkedin_profile_url: string;
     title: string;
@@ -18,13 +18,13 @@ export interface Experience {
 }
 
 export interface Education {
-    starts_at: Date;
-    ends_at: Date;
-    field_of_study: null;
-    degree_name: null;
+    starts_at: ProfileDate;
+    ends_at: ProfileDate | null;
+    field_of_study: string;
+    degree_name: string;
     school: string;
     description: string | null;
-    logo_url: string;
+    logo_url: string | null;
 }
 
 export interface Language {
@@ -46,7 +46,7 @@ export interface ProfileSummary {
 export interface Article {
     title: string,
     link: string,
-    published_date: Date,
+    published_date: ProfileDate,
     author: string,
     image_url: string
 }

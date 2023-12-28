@@ -6,6 +6,7 @@ import { LinkedInPosition } from '../../src/entities/linkedin-position.entity';
 import { LinkedInSkill } from '../../src/entities/linkedin-skill.entity';
 import { LinkedInEducation } from '../../src/entities/linkedin-education.entity';
 import { LinkedInCompany } from 'src/entities/linkedin-company.entity';
+import { Image } from 'src/entities/image.entity';
 
 describe('getProfile', () => {
   it('should return the correct profile from the response', async () => {
@@ -21,7 +22,7 @@ describe('getProfile', () => {
     const profile = getProfileFromResponse(resultProfile.publicIdentifier, response)
 
     expect(profile.pictureUrls).toHaveLength(4);
-    profile.pictureUrls.forEach((url: string) => expect(typeof url).toEqual('string'));
+    profile.pictureUrls.forEach((image: Image) => expect(typeof image.url).toEqual('string'));
   });
 
 

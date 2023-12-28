@@ -13,9 +13,17 @@ import { LinkedInPosition, POSITION_TYPE } from '../entities/linkedin-position.e
 import { LinkedInSkill, SKILL_TYPE } from '../entities/linkedin-skill.entity';
 import { EDUCATION_TYPE, LinkedInEducation } from '../entities/linkedin-education.entity';
 import { LinkedInCompany, COMPANY_TYPE } from '../entities/linkedin-company.entity';
+import { Image } from 'src/entities/image.entity';
 
-const getProfilePictureUrls = (picture?: LinkedInVectorImage): string[] =>
-  map(picture?.artifacts, artifact => `${picture?.rootUrl}${artifact.fileIdentifyingUrlPathSegment}`);
+const getProfilePictureUrls = (picture?: LinkedInVectorImage): Image[] =>
+  map(picture?.artifacts, artifact => {
+    return {
+      width: artifact.with,
+      height: artifact.height,
+      url: `${picture?.rootUrl}${artifact.fileIdentifyingUrlPathSegment}`
+    }
+    
+  });
 
 const transformMiniProfile = (miniProfile: LinkedInMiniProfile): MiniProfile => ({
   ...miniProfile,
