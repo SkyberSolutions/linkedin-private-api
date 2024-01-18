@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / Language
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / Language
 
 # Enumeration: Language
 
@@ -199,7 +199,7 @@
 
 #### Defined in
 
-[types/language-code.enum.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L3)
+[types/language-code.enum.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L3)
 
 ___
 
@@ -209,7 +209,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L2)
+[types/language-code.enum.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L2)
 
 ___
 
@@ -219,7 +219,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L5)
+[types/language-code.enum.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L5)
 
 ___
 
@@ -229,7 +229,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L6)
+[types/language-code.enum.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L6)
 
 ___
 
@@ -239,7 +239,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:150](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L150)
+[types/language-code.enum.ts:150](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L150)
 
 ___
 
@@ -249,7 +249,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L7)
+[types/language-code.enum.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L7)
 
 ___
 
@@ -259,7 +259,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:9](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L9)
+[types/language-code.enum.ts:9](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L9)
 
 ___
 
@@ -269,7 +269,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:8](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L8)
+[types/language-code.enum.ts:8](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L8)
 
 ___
 
@@ -279,7 +279,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:64](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L64)
+[types/language-code.enum.ts:64](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L64)
 
 ___
 
@@ -289,7 +289,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L10)
+[types/language-code.enum.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L10)
 
 ___
 
@@ -299,7 +299,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:11](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L11)
+[types/language-code.enum.ts:11](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L11)
 
 ___
 
@@ -309,7 +309,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L4)
+[types/language-code.enum.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L4)
 
 ___
 
@@ -319,7 +319,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:12](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L12)
+[types/language-code.enum.ts:12](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L12)
 
 ___
 
@@ -329,7 +329,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:13](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L13)
+[types/language-code.enum.ts:13](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L13)
 
 ___
 
@@ -339,7 +339,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:19](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L19)
+[types/language-code.enum.ts:19](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L19)
 
 ___
 
@@ -349,7 +349,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:14](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L14)
+[types/language-code.enum.ts:14](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L14)
 
 ___
 
@@ -359,7 +359,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:43](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L43)
+[types/language-code.enum.ts:43](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L43)
 
 ___
 
@@ -369,7 +369,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:15](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L15)
+[types/language-code.enum.ts:15](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L15)
 
 ___
 
@@ -379,7 +379,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:20](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L20)
+[types/language-code.enum.ts:20](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L20)
 
 ___
 
@@ -389,7 +389,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:17](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L17)
+[types/language-code.enum.ts:17](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L17)
 
 ___
 
@@ -399,7 +399,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:18](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L18)
+[types/language-code.enum.ts:18](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L18)
 
 ___
 
@@ -409,7 +409,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:23](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L23)
+[types/language-code.enum.ts:23](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L23)
 
 ___
 
@@ -419,7 +419,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:22](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L22)
+[types/language-code.enum.ts:22](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L22)
 
 ___
 
@@ -429,7 +429,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:16](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L16)
+[types/language-code.enum.ts:16](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L16)
 
 ___
 
@@ -439,7 +439,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:111](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L111)
+[types/language-code.enum.ts:111](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L111)
 
 ___
 
@@ -449,7 +449,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:24](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L24)
+[types/language-code.enum.ts:24](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L24)
 
 ___
 
@@ -459,7 +459,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:26](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L26)
+[types/language-code.enum.ts:26](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L26)
 
 ___
 
@@ -469,7 +469,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:25](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L25)
+[types/language-code.enum.ts:25](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L25)
 
 ___
 
@@ -479,7 +479,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:122](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L122)
+[types/language-code.enum.ts:122](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L122)
 
 ___
 
@@ -489,7 +489,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:184](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L184)
+[types/language-code.enum.ts:184](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L184)
 
 ___
 
@@ -499,7 +499,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:31](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L31)
+[types/language-code.enum.ts:31](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L31)
 
 ___
 
@@ -509,7 +509,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:91](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L91)
+[types/language-code.enum.ts:91](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L91)
 
 ___
 
@@ -519,7 +519,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:27](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L27)
+[types/language-code.enum.ts:27](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L27)
 
 ___
 
@@ -529,7 +529,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:28](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L28)
+[types/language-code.enum.ts:28](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L28)
 
 ___
 
@@ -539,7 +539,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:61](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L61)
+[types/language-code.enum.ts:61](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L61)
 
 ___
 
@@ -549,7 +549,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:29](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L29)
+[types/language-code.enum.ts:29](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L29)
 
 ___
 
@@ -559,7 +559,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:33](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L33)
+[types/language-code.enum.ts:33](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L33)
 
 ___
 
@@ -569,7 +569,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:35](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L35)
+[types/language-code.enum.ts:35](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L35)
 
 ___
 
@@ -579,7 +579,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:117](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L117)
+[types/language-code.enum.ts:117](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L117)
 
 ___
 
@@ -589,7 +589,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:36](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L36)
+[types/language-code.enum.ts:36](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L36)
 
 ___
 
@@ -599,7 +599,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:39](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L39)
+[types/language-code.enum.ts:39](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L39)
 
 ___
 
@@ -609,7 +609,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:40](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L40)
+[types/language-code.enum.ts:40](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L40)
 
 ___
 
@@ -619,7 +619,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:42](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L42)
+[types/language-code.enum.ts:42](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L42)
 
 ___
 
@@ -629,7 +629,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:37](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L37)
+[types/language-code.enum.ts:37](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L37)
 
 ___
 
@@ -639,7 +639,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:48](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L48)
+[types/language-code.enum.ts:48](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L48)
 
 ___
 
@@ -649,7 +649,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:47](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L47)
+[types/language-code.enum.ts:47](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L47)
 
 ___
 
@@ -659,7 +659,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:46](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L46)
+[types/language-code.enum.ts:46](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L46)
 
 ___
 
@@ -669,7 +669,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:49](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L49)
+[types/language-code.enum.ts:49](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L49)
 
 ___
 
@@ -679,7 +679,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:45](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L45)
+[types/language-code.enum.ts:45](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L45)
 
 ___
 
@@ -689,7 +689,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:53](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L53)
+[types/language-code.enum.ts:53](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L53)
 
 ___
 
@@ -699,7 +699,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:95](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L95)
+[types/language-code.enum.ts:95](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L95)
 
 ___
 
@@ -709,7 +709,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:78](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L78)
+[types/language-code.enum.ts:78](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L78)
 
 ___
 
@@ -719,7 +719,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:34](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L34)
+[types/language-code.enum.ts:34](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L34)
 
 ___
 
@@ -729,7 +729,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:38](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L38)
+[types/language-code.enum.ts:38](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L38)
 
 ___
 
@@ -739,7 +739,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:54](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L54)
+[types/language-code.enum.ts:54](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L54)
 
 ___
 
@@ -749,7 +749,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:55](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L55)
+[types/language-code.enum.ts:55](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L55)
 
 ___
 
@@ -759,7 +759,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:62](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L62)
+[types/language-code.enum.ts:62](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L62)
 
 ___
 
@@ -769,7 +769,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:57](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L57)
+[types/language-code.enum.ts:57](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L57)
 
 ___
 
@@ -779,7 +779,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:58](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L58)
+[types/language-code.enum.ts:58](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L58)
 
 ___
 
@@ -789,7 +789,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:65](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L65)
+[types/language-code.enum.ts:65](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L65)
 
 ___
 
@@ -799,7 +799,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:59](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L59)
+[types/language-code.enum.ts:59](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L59)
 
 ___
 
@@ -809,7 +809,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:60](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L60)
+[types/language-code.enum.ts:60](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L60)
 
 ___
 
@@ -819,7 +819,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:63](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L63)
+[types/language-code.enum.ts:63](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L63)
 
 ___
 
@@ -829,7 +829,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:73](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L73)
+[types/language-code.enum.ts:73](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L73)
 
 ___
 
@@ -839,7 +839,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:72](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L72)
+[types/language-code.enum.ts:72](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L72)
 
 ___
 
@@ -849,7 +849,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:69](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L69)
+[types/language-code.enum.ts:69](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L69)
 
 ___
 
@@ -859,7 +859,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:67](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L67)
+[types/language-code.enum.ts:67](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L67)
 
 ___
 
@@ -869,7 +869,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:66](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L66)
+[types/language-code.enum.ts:66](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L66)
 
 ___
 
@@ -879,7 +879,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:68](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L68)
+[types/language-code.enum.ts:68](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L68)
 
 ___
 
@@ -889,7 +889,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:75](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L75)
+[types/language-code.enum.ts:75](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L75)
 
 ___
 
@@ -899,7 +899,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:71](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L71)
+[types/language-code.enum.ts:71](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L71)
 
 ___
 
@@ -909,7 +909,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:51](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L51)
+[types/language-code.enum.ts:51](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L51)
 
 ___
 
@@ -919,7 +919,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:74](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L74)
+[types/language-code.enum.ts:74](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L74)
 
 ___
 
@@ -929,7 +929,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:76](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L76)
+[types/language-code.enum.ts:76](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L76)
 
 ___
 
@@ -939,7 +939,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:77](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L77)
+[types/language-code.enum.ts:77](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L77)
 
 ___
 
@@ -949,7 +949,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:83](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L83)
+[types/language-code.enum.ts:83](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L83)
 
 ___
 
@@ -959,7 +959,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:85](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L85)
+[types/language-code.enum.ts:85](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L85)
 
 ___
 
@@ -969,7 +969,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:87](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L87)
+[types/language-code.enum.ts:87](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L87)
 
 ___
 
@@ -979,7 +979,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:88](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L88)
+[types/language-code.enum.ts:88](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L88)
 
 ___
 
@@ -989,7 +989,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:82](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L82)
+[types/language-code.enum.ts:82](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L82)
 
 ___
 
@@ -999,7 +999,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:84](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L84)
+[types/language-code.enum.ts:84](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L84)
 
 ___
 
@@ -1009,7 +1009,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:80](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L80)
+[types/language-code.enum.ts:80](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L80)
 
 ___
 
@@ -1019,7 +1019,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:138](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L138)
+[types/language-code.enum.ts:138](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L138)
 
 ___
 
@@ -1029,7 +1029,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:135](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L135)
+[types/language-code.enum.ts:135](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L135)
 
 ___
 
@@ -1039,7 +1039,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:90](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L90)
+[types/language-code.enum.ts:90](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L90)
 
 ___
 
@@ -1049,7 +1049,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:79](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L79)
+[types/language-code.enum.ts:79](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L79)
 
 ___
 
@@ -1059,7 +1059,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:86](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L86)
+[types/language-code.enum.ts:86](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L86)
 
 ___
 
@@ -1069,7 +1069,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:89](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L89)
+[types/language-code.enum.ts:89](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L89)
 
 ___
 
@@ -1079,7 +1079,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:81](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L81)
+[types/language-code.enum.ts:81](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L81)
 
 ___
 
@@ -1089,7 +1089,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:92](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L92)
+[types/language-code.enum.ts:92](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L92)
 
 ___
 
@@ -1099,7 +1099,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:98](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L98)
+[types/language-code.enum.ts:98](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L98)
 
 ___
 
@@ -1109,7 +1109,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:93](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L93)
+[types/language-code.enum.ts:93](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L93)
 
 ___
 
@@ -1119,7 +1119,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:101](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L101)
+[types/language-code.enum.ts:101](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L101)
 
 ___
 
@@ -1129,7 +1129,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:96](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L96)
+[types/language-code.enum.ts:96](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L96)
 
 ___
 
@@ -1139,7 +1139,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:97](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L97)
+[types/language-code.enum.ts:97](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L97)
 
 ___
 
@@ -1149,7 +1149,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:99](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L99)
+[types/language-code.enum.ts:99](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L99)
 
 ___
 
@@ -1159,7 +1159,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:100](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L100)
+[types/language-code.enum.ts:100](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L100)
 
 ___
 
@@ -1169,7 +1169,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:94](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L94)
+[types/language-code.enum.ts:94](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L94)
 
 ___
 
@@ -1179,7 +1179,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:105](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L105)
+[types/language-code.enum.ts:105](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L105)
 
 ___
 
@@ -1189,7 +1189,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:102](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L102)
+[types/language-code.enum.ts:102](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L102)
 
 ___
 
@@ -1199,7 +1199,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:109](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L109)
+[types/language-code.enum.ts:109](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L109)
 
 ___
 
@@ -1209,7 +1209,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:106](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L106)
+[types/language-code.enum.ts:106](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L106)
 
 ___
 
@@ -1219,7 +1219,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:110](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L110)
+[types/language-code.enum.ts:110](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L110)
 
 ___
 
@@ -1229,7 +1229,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:56](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L56)
+[types/language-code.enum.ts:56](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L56)
 
 ___
 
@@ -1239,7 +1239,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:108](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L108)
+[types/language-code.enum.ts:108](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L108)
 
 ___
 
@@ -1249,7 +1249,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:103](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L103)
+[types/language-code.enum.ts:103](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L103)
 
 ___
 
@@ -1259,7 +1259,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:107](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L107)
+[types/language-code.enum.ts:107](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L107)
 
 ___
 
@@ -1269,7 +1269,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:104](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L104)
+[types/language-code.enum.ts:104](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L104)
 
 ___
 
@@ -1279,7 +1279,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:112](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L112)
+[types/language-code.enum.ts:112](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L112)
 
 ___
 
@@ -1289,7 +1289,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:121](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L121)
+[types/language-code.enum.ts:121](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L121)
 
 ___
 
@@ -1299,7 +1299,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:116](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L116)
+[types/language-code.enum.ts:116](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L116)
 
 ___
 
@@ -1309,7 +1309,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:115](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L115)
+[types/language-code.enum.ts:115](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L115)
 
 ___
 
@@ -1319,7 +1319,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:114](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L114)
+[types/language-code.enum.ts:114](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L114)
 
 ___
 
@@ -1329,7 +1329,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:142](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L142)
+[types/language-code.enum.ts:142](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L142)
 
 ___
 
@@ -1339,7 +1339,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:119](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L119)
+[types/language-code.enum.ts:119](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L119)
 
 ___
 
@@ -1349,7 +1349,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:113](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L113)
+[types/language-code.enum.ts:113](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L113)
 
 ___
 
@@ -1359,7 +1359,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:118](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L118)
+[types/language-code.enum.ts:118](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L118)
 
 ___
 
@@ -1369,7 +1369,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:70](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L70)
+[types/language-code.enum.ts:70](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L70)
 
 ___
 
@@ -1379,7 +1379,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:123](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L123)
+[types/language-code.enum.ts:123](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L123)
 
 ___
 
@@ -1389,7 +1389,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:124](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L124)
+[types/language-code.enum.ts:124](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L124)
 
 ___
 
@@ -1399,7 +1399,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:30](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L30)
+[types/language-code.enum.ts:30](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L30)
 
 ___
 
@@ -1409,7 +1409,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:126](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L126)
+[types/language-code.enum.ts:126](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L126)
 
 ___
 
@@ -1419,7 +1419,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:125](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L125)
+[types/language-code.enum.ts:125](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L125)
 
 ___
 
@@ -1429,7 +1429,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:127](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L127)
+[types/language-code.enum.ts:127](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L127)
 
 ___
 
@@ -1439,7 +1439,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:128](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L128)
+[types/language-code.enum.ts:128](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L128)
 
 ___
 
@@ -1449,7 +1449,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:131](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L131)
+[types/language-code.enum.ts:131](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L131)
 
 ___
 
@@ -1459,7 +1459,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:44](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L44)
+[types/language-code.enum.ts:44](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L44)
 
 ___
 
@@ -1469,7 +1469,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:130](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L130)
+[types/language-code.enum.ts:130](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L130)
 
 ___
 
@@ -1479,7 +1479,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:132](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L132)
+[types/language-code.enum.ts:132](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L132)
 
 ___
 
@@ -1489,7 +1489,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:129](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L129)
+[types/language-code.enum.ts:129](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L129)
 
 ___
 
@@ -1499,7 +1499,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:133](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L133)
+[types/language-code.enum.ts:133](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L133)
 
 ___
 
@@ -1509,7 +1509,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:136](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L136)
+[types/language-code.enum.ts:136](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L136)
 
 ___
 
@@ -1519,7 +1519,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:134](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L134)
+[types/language-code.enum.ts:134](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L134)
 
 ___
 
@@ -1529,7 +1529,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:137](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L137)
+[types/language-code.enum.ts:137](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L137)
 
 ___
 
@@ -1539,7 +1539,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:147](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L147)
+[types/language-code.enum.ts:147](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L147)
 
 ___
 
@@ -1549,7 +1549,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:143](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L143)
+[types/language-code.enum.ts:143](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L143)
 
 ___
 
@@ -1559,7 +1559,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:139](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L139)
+[types/language-code.enum.ts:139](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L139)
 
 ___
 
@@ -1569,7 +1569,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:140](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L140)
+[types/language-code.enum.ts:140](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L140)
 
 ___
 
@@ -1579,7 +1579,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:52](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L52)
+[types/language-code.enum.ts:52](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L52)
 
 ___
 
@@ -1589,7 +1589,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:151](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L151)
+[types/language-code.enum.ts:151](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L151)
 
 ___
 
@@ -1599,7 +1599,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:148](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L148)
+[types/language-code.enum.ts:148](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L148)
 
 ___
 
@@ -1609,7 +1609,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:141](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L141)
+[types/language-code.enum.ts:141](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L141)
 
 ___
 
@@ -1619,7 +1619,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:144](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L144)
+[types/language-code.enum.ts:144](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L144)
 
 ___
 
@@ -1629,7 +1629,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:145](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L145)
+[types/language-code.enum.ts:145](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L145)
 
 ___
 
@@ -1639,7 +1639,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:146](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L146)
+[types/language-code.enum.ts:146](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L146)
 
 ___
 
@@ -1649,7 +1649,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:149](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L149)
+[types/language-code.enum.ts:149](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L149)
 
 ___
 
@@ -1659,7 +1659,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:120](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L120)
+[types/language-code.enum.ts:120](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L120)
 
 ___
 
@@ -1669,7 +1669,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:153](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L153)
+[types/language-code.enum.ts:153](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L153)
 
 ___
 
@@ -1679,7 +1679,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:41](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L41)
+[types/language-code.enum.ts:41](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L41)
 
 ___
 
@@ -1689,7 +1689,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:154](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L154)
+[types/language-code.enum.ts:154](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L154)
 
 ___
 
@@ -1699,7 +1699,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:156](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L156)
+[types/language-code.enum.ts:156](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L156)
 
 ___
 
@@ -1709,7 +1709,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:152](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L152)
+[types/language-code.enum.ts:152](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L152)
 
 ___
 
@@ -1719,7 +1719,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:155](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L155)
+[types/language-code.enum.ts:155](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L155)
 
 ___
 
@@ -1729,7 +1729,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:163](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L163)
+[types/language-code.enum.ts:163](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L163)
 
 ___
 
@@ -1739,7 +1739,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:170](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L170)
+[types/language-code.enum.ts:170](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L170)
 
 ___
 
@@ -1749,7 +1749,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:159](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L159)
+[types/language-code.enum.ts:159](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L159)
 
 ___
 
@@ -1759,7 +1759,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:157](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L157)
+[types/language-code.enum.ts:157](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L157)
 
 ___
 
@@ -1769,7 +1769,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:168](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L168)
+[types/language-code.enum.ts:168](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L168)
 
 ___
 
@@ -1779,7 +1779,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:158](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L158)
+[types/language-code.enum.ts:158](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L158)
 
 ___
 
@@ -1789,7 +1789,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:160](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L160)
+[types/language-code.enum.ts:160](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L160)
 
 ___
 
@@ -1799,7 +1799,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:21](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L21)
+[types/language-code.enum.ts:21](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L21)
 
 ___
 
@@ -1809,7 +1809,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:161](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L161)
+[types/language-code.enum.ts:161](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L161)
 
 ___
 
@@ -1819,7 +1819,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:165](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L165)
+[types/language-code.enum.ts:165](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L165)
 
 ___
 
@@ -1829,7 +1829,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:167](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L167)
+[types/language-code.enum.ts:167](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L167)
 
 ___
 
@@ -1839,7 +1839,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:164](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L164)
+[types/language-code.enum.ts:164](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L164)
 
 ___
 
@@ -1849,7 +1849,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:166](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L166)
+[types/language-code.enum.ts:166](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L166)
 
 ___
 
@@ -1859,7 +1859,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:162](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L162)
+[types/language-code.enum.ts:162](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L162)
 
 ___
 
@@ -1869,7 +1869,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:169](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L169)
+[types/language-code.enum.ts:169](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L169)
 
 ___
 
@@ -1879,7 +1879,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:172](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L172)
+[types/language-code.enum.ts:172](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L172)
 
 ___
 
@@ -1889,7 +1889,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:173](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L173)
+[types/language-code.enum.ts:173](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L173)
 
 ___
 
@@ -1899,7 +1899,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:171](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L171)
+[types/language-code.enum.ts:171](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L171)
 
 ___
 
@@ -1909,7 +1909,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:174](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L174)
+[types/language-code.enum.ts:174](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L174)
 
 ___
 
@@ -1919,7 +1919,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:175](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L175)
+[types/language-code.enum.ts:175](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L175)
 
 ___
 
@@ -1929,7 +1929,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:176](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L176)
+[types/language-code.enum.ts:176](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L176)
 
 ___
 
@@ -1939,7 +1939,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:177](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L177)
+[types/language-code.enum.ts:177](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L177)
 
 ___
 
@@ -1949,7 +1949,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:178](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L178)
+[types/language-code.enum.ts:178](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L178)
 
 ___
 
@@ -1959,7 +1959,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:32](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L32)
+[types/language-code.enum.ts:32](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L32)
 
 ___
 
@@ -1969,7 +1969,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:50](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L50)
+[types/language-code.enum.ts:50](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L50)
 
 ___
 
@@ -1979,7 +1979,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:179](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L179)
+[types/language-code.enum.ts:179](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L179)
 
 ___
 
@@ -1989,7 +1989,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:180](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L180)
+[types/language-code.enum.ts:180](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L180)
 
 ___
 
@@ -1999,7 +1999,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:181](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L181)
+[types/language-code.enum.ts:181](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L181)
 
 ___
 
@@ -2009,7 +2009,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:182](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L182)
+[types/language-code.enum.ts:182](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L182)
 
 ___
 
@@ -2019,7 +2019,7 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:183](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L183)
+[types/language-code.enum.ts:183](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L183)
 
 ___
 
@@ -2029,4 +2029,4 @@ ___
 
 #### Defined in
 
-[types/language-code.enum.ts:185](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/language-code.enum.ts#L185)
+[types/language-code.enum.ts:185](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/language-code.enum.ts#L185)

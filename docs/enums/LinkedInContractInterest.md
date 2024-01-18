@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInContractInterest
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInContractInterest
 
 # Enumeration: LinkedInContractInterest
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[types/contract-interest.enum.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/contract-interest.enum.ts#L3)
+[types/contract-interest.enum.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/contract-interest.enum.ts#L3)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[types/contract-interest.enum.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/contract-interest.enum.ts#L2)
+[types/contract-interest.enum.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/contract-interest.enum.ts#L2)

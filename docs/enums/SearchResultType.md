@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / SearchResultType
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / SearchResultType
 
 # Enumeration: SearchResultType
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[types/search-result-type.enum.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/search-result-type.enum.ts#L3)
+[types/search-result-type.enum.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/search-result-type.enum.ts#L3)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[types/search-result-type.enum.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/search-result-type.enum.ts#L2)
+[types/search-result-type.enum.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/search-result-type.enum.ts#L2)

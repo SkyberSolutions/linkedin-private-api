@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInJobPostingCompany
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInJobPostingCompany
 
 # Interface: LinkedInJobPostingCompany
 
@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[entities/linkedin-job-posting.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-job-posting.ts#L5)
+[entities/linkedin-job-posting.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-job-posting.ts#L5)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-job-posting.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-job-posting.ts#L6)
+[entities/linkedin-job-posting.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-job-posting.ts#L6)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-job-posting.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-job-posting.ts#L4)
+[entities/linkedin-job-posting.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-job-posting.ts#L4)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[entities/linkedin-job-posting.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-job-posting.ts#L7)
+[entities/linkedin-job-posting.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-job-posting.ts#L7)

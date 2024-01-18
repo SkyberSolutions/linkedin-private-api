@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInMiniCompany
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInMiniCompany
 
 # Interface: LinkedInMiniCompany
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[entities/linkedin-mini-company.entity.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-mini-company.entity.ts#L6)
+[entities/linkedin-mini-company.entity.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-mini-company.entity.ts#L6)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-mini-company.entity.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-mini-company.entity.ts#L7)
+[entities/linkedin-mini-company.entity.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-mini-company.entity.ts#L7)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-mini-company.entity.ts:8](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-mini-company.entity.ts#L8)
+[entities/linkedin-mini-company.entity.ts:8](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-mini-company.entity.ts#L8)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-mini-company.entity.ts:9](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-mini-company.entity.ts#L9)
+[entities/linkedin-mini-company.entity.ts:9](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-mini-company.entity.ts#L9)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-mini-company.entity.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-mini-company.entity.ts#L10)
+[entities/linkedin-mini-company.entity.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-mini-company.entity.ts#L10)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-mini-company.entity.ts:11](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-mini-company.entity.ts#L11)
+[entities/linkedin-mini-company.entity.ts:11](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-mini-company.entity.ts#L11)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-mini-company.entity.ts:12](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-mini-company.entity.ts#L12)
+[entities/linkedin-mini-company.entity.ts:12](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-mini-company.entity.ts#L12)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-mini-company.entity.ts:13](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-mini-company.entity.ts#L13)
+[entities/linkedin-mini-company.entity.ts:13](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-mini-company.entity.ts#L13)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-[entities/linkedin-mini-company.entity.ts:14](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-mini-company.entity.ts#L14)
+[entities/linkedin-mini-company.entity.ts:14](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-mini-company.entity.ts#L14)

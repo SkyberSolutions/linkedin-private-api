@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInPhotoFilterPicture
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInPhotoFilterPicture
 
 # Interface: LinkedInPhotoFilterPicture
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[entities/linkedin-profile.entity.ts:30](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-profile.entity.ts#L30)
+[entities/linkedin-profile.entity.ts:30](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-profile.entity.ts#L30)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-profile.entity.ts:29](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-profile.entity.ts#L29)
+[entities/linkedin-profile.entity.ts:29](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-profile.entity.ts#L29)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-profile.entity.ts:31](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-profile.entity.ts#L31)
+[entities/linkedin-profile.entity.ts:31](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-profile.entity.ts#L31)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-profile.entity.ts:34](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-profile.entity.ts#L34)
+[entities/linkedin-profile.entity.ts:34](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-profile.entity.ts#L34)
 
 ___
 
@@ -66,4 +66,4 @@ ___
 
 #### Defined in
 
-[entities/linkedin-profile.entity.ts:35](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-profile.entity.ts#L35)
+[entities/linkedin-profile.entity.ts:35](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-profile.entity.ts#L35)

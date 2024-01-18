@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / AnonymousCookies
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / AnonymousCookies
 
 # Interface: AnonymousCookies
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[types/anonymous-cookies.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/anonymous-cookies.ts#L4)
+[types/anonymous-cookies.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/anonymous-cookies.ts#L4)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[types/anonymous-cookies.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/anonymous-cookies.ts#L2)
+[types/anonymous-cookies.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/anonymous-cookies.ts#L2)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[types/anonymous-cookies.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/anonymous-cookies.ts#L3)
+[types/anonymous-cookies.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/anonymous-cookies.ts#L3)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[types/anonymous-cookies.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/anonymous-cookies.ts#L5)
+[types/anonymous-cookies.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/anonymous-cookies.ts#L5)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[types/anonymous-cookies.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/anonymous-cookies.ts#L6)
+[types/anonymous-cookies.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/anonymous-cookies.ts#L6)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[types/anonymous-cookies.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/anonymous-cookies.ts#L7)
+[types/anonymous-cookies.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/anonymous-cookies.ts#L7)

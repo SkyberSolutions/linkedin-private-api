@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / PeopleSearchFilters
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / PeopleSearchFilters
 
 # Interface: PeopleSearchFilters
 
@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[types/people-search-filters.ts:8](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L8)
+[types/people-search-filters.ts:8](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L8)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[types/people-search-filters.ts:14](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L14)
+[types/people-search-filters.ts:14](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L14)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[types/people-search-filters.ts:15](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L15)
+[types/people-search-filters.ts:15](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L15)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[types/people-search-filters.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L6)
+[types/people-search-filters.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L6)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[types/people-search-filters.ts:17](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L17)
+[types/people-search-filters.ts:17](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L17)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[types/people-search-filters.ts:9](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L9)
+[types/people-search-filters.ts:9](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L9)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[types/people-search-filters.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L10)
+[types/people-search-filters.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L10)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[types/people-search-filters.ts:18](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L18)
+[types/people-search-filters.ts:18](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L18)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[types/people-search-filters.ts:11](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L11)
+[types/people-search-filters.ts:11](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L11)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[types/people-search-filters.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L7)
+[types/people-search-filters.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L7)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[types/people-search-filters.ts:12](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L12)
+[types/people-search-filters.ts:12](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L12)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[types/people-search-filters.ts:13](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L13)
+[types/people-search-filters.ts:13](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L13)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-[types/people-search-filters.ts:16](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L16)
+[types/people-search-filters.ts:16](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L16)
 
 ___
 
@@ -159,4 +159,4 @@ ___
 
 #### Defined in
 
-[types/people-search-filters.ts:19](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/people-search-filters.ts#L19)
+[types/people-search-filters.ts:19](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/people-search-filters.ts#L19)

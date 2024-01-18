@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / AttributeText
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / AttributeText
 
 # Interface: AttributeText
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[entities/linkedin-attribute-text.entity.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-attribute-text.entity.ts#L2)
+[entities/linkedin-attribute-text.entity.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-attribute-text.entity.ts#L2)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[entities/linkedin-attribute-text.entity.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-attribute-text.entity.ts#L3)
+[entities/linkedin-attribute-text.entity.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-attribute-text.entity.ts#L3)

@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / SendMessageResponse
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / SendMessageResponse
 
 # Interface: SendMessageResponse
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[responses/message.response.post.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/responses/message.response.post.ts#L4)
+[responses/message.response.post.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/message.response.post.ts#L4)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[responses/message.response.post.ts:8](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/responses/message.response.post.ts#L8)
+[responses/message.response.post.ts:8](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/message.response.post.ts#L8)

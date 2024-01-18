@@ -1,6 +1,6 @@
-[linkedin-private-api](README.md) / Exports
+[@skybersolutions/linkedin-private-api](README.md) / Exports
 
-# linkedin-private-api
+# @skybersolutions/linkedin-private-api
 
 ## Table of contents
 
@@ -17,14 +17,19 @@
 ### Classes
 
 - [Client](classes/Client.md)
+- [ProfileMapper](classes/ProfileMapper.md)
 
 ### Interfaces
 
+- [Activity](interfaces/Activity.md)
 - [AnonymousCookies](interfaces/AnonymousCookies.md)
+- [Article](interfaces/Article.md)
 - [AttributeText](interfaces/AttributeText.md)
 - [AuthCookies](interfaces/AuthCookies.md)
 - [CompanySearchHit](interfaces/CompanySearchHit.md)
 - [Conversation](interfaces/Conversation.md)
+- [Education](interfaces/Education.md)
+- [Experience](interfaces/Experience.md)
 - [GetConversationResponse](interfaces/GetConversationResponse.md)
 - [GetOwnProfileResponse](interfaces/GetOwnProfileResponse.md)
 - [Invitation](interfaces/Invitation.md)
@@ -44,7 +49,10 @@
 - [LinkedInMiniProfile](interfaces/LinkedInMiniProfile.md)
 - [LinkedInParticipantReceipts](interfaces/LinkedInParticipantReceipts.md)
 - [LinkedInPhotoFilterPicture](interfaces/LinkedInPhotoFilterPicture.md)
+- [LinkedInPrimaryLocale](interfaces/LinkedInPrimaryLocale.md)
 - [LinkedInProfile](interfaces/LinkedInProfile.md)
+- [LinkedInProfileGeoLocation](interfaces/LinkedInProfileGeoLocation.md)
+- [LinkedInProfileLocation](interfaces/LinkedInProfileLocation.md)
 - [LinkedInSearchCluster](interfaces/LinkedInSearchCluster.md)
 - [LinkedInSearchHitV2](interfaces/LinkedInSearchHitV2.md)
 - [LinkedInTextViewModel](interfaces/LinkedInTextViewModel.md)
@@ -57,6 +65,9 @@
 - [PeopleSearchFilters](interfaces/PeopleSearchFilters.md)
 - [PeopleSearchHit](interfaces/PeopleSearchHit.md)
 - [Profile](interfaces/Profile.md)
+- [ProfileDate](interfaces/ProfileDate.md)
+- [ProfileJSON](interfaces/ProfileJSON.md)
+- [ProfileSummary](interfaces/ProfileSummary.md)
 - [QuickReplayRecommendation](interfaces/QuickReplayRecommendation.md)
 - [SendMessageResponse](interfaces/SendMessageResponse.md)
 
@@ -75,7 +86,10 @@
 - [LinkedInEventUrn](modules.md#linkedineventurn)
 - [MiniProfileUrn](modules.md#miniprofileurn)
 - [ProfileId](modules.md#profileid)
+- [ProfileResponseEntityType](modules.md#profileresponseentitytype)
+- [ProfileResponseType](modules.md#profileresponsetype)
 - [ProfileUrn](modules.md#profileurn)
+- [UrnCollection](modules.md#urncollection)
 
 ### Variables
 
@@ -97,7 +111,7 @@
 
 #### Defined in
 
-[types/blended-search-filters.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/blended-search-filters.ts#L4)
+[types/blended-search-filters.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/blended-search-filters.ts#L4)
 
 ___
 
@@ -107,7 +121,7 @@ ___
 
 #### Defined in
 
-[types/client.interface.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/client.interface.ts#L3)
+[types/client.interface.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/client.interface.ts#L3)
 
 ___
 
@@ -117,7 +131,7 @@ ___
 
 #### Defined in
 
-[entities/conversation.entity.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/conversation.entity.ts#L4)
+[entities/conversation.entity.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/conversation.entity.ts#L4)
 
 ___
 
@@ -127,7 +141,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-conversation.entity.ts:23](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-conversation.entity.ts#L23)
+[entities/linkedin-conversation.entity.ts:23](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-conversation.entity.ts#L23)
 
 ___
 
@@ -137,7 +151,7 @@ ___
 
 #### Defined in
 
-[responses/blended-search.reponse.get.ts:17](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/responses/blended-search.reponse.get.ts#L17)
+[responses/blended-search.reponse.get.ts:17](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/blended-search.reponse.get.ts#L17)
 
 ___
 
@@ -147,7 +161,7 @@ ___
 
 #### Defined in
 
-[responses/conversations.response.get.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/responses/conversations.response.get.ts#L10)
+[responses/conversations.response.get.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/conversations.response.get.ts#L10)
 
 ___
 
@@ -157,17 +171,17 @@ ___
 
 #### Defined in
 
-[responses/messages.response.get.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/responses/messages.response.get.ts#L6)
+[responses/messages.response.get.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/messages.response.get.ts#L6)
 
 ___
 
 ### GetProfileResponse
 
-Ƭ **GetProfileResponse**: [`LinkedInCollectionResponse`](interfaces/LinkedInCollectionResponse.md)<[`ProfileUrn`](modules.md#profileurn), [`LinkedInProfile`](interfaces/LinkedInProfile.md) \| [`LinkedInCompany`](interfaces/LinkedInCompany.md)\>
+Ƭ **GetProfileResponse**: [`LinkedInCollectionResponse`](interfaces/LinkedInCollectionResponse.md)<[`ProfileUrn`](modules.md#profileurn), [`ProfileResponseType`](modules.md#profileresponsetype)\>
 
 #### Defined in
 
-[responses/profile.response.get.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/responses/profile.response.get.ts#L5)
+[responses/profile.response.get.ts:21](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/profile.response.get.ts#L21)
 
 ___
 
@@ -177,7 +191,7 @@ ___
 
 #### Defined in
 
-[responses/received-invitations.response.get.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/responses/received-invitations.response.get.ts#L10)
+[responses/received-invitations.response.get.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/received-invitations.response.get.ts#L10)
 
 ___
 
@@ -187,7 +201,7 @@ ___
 
 #### Defined in
 
-[responses/sent-invitations.response.get.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/responses/sent-invitations.response.get.ts#L10)
+[responses/sent-invitations.response.get.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/sent-invitations.response.get.ts#L10)
 
 ___
 
@@ -197,7 +211,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-event.entity.ts:1](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-event.entity.ts#L1)
+[entities/linkedin-event.entity.ts:1](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-event.entity.ts#L1)
 
 ___
 
@@ -207,7 +221,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-mini-profile.entity.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-mini-profile.entity.ts#L3)
+[entities/linkedin-mini-profile.entity.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-mini-profile.entity.ts#L3)
 
 ___
 
@@ -217,7 +231,27 @@ ___
 
 #### Defined in
 
-[entities/mini-profile.entity.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/mini-profile.entity.ts#L3)
+[entities/mini-profile.entity.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/mini-profile.entity.ts#L4)
+
+___
+
+### ProfileResponseEntityType
+
+Ƭ **ProfileResponseEntityType**: [`LinkedInProfile`](interfaces/LinkedInProfile.md) \| [`LinkedInCompany`](interfaces/LinkedInCompany.md) \| `LinkedInPositionGroup` \| `LinkedInPosition` \| `LinkedInSkill` \| `LinkedInEducation`
+
+#### Defined in
+
+[responses/profile.response.get.ts:12](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/profile.response.get.ts#L12)
+
+___
+
+### ProfileResponseType
+
+Ƭ **ProfileResponseType**: [`ProfileResponseEntityType`](modules.md#profileresponseentitytype) \| [`UrnCollection`](modules.md#urncollection)
+
+#### Defined in
+
+[responses/profile.response.get.ts:19](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/profile.response.get.ts#L19)
 
 ___
 
@@ -227,7 +261,17 @@ ___
 
 #### Defined in
 
-[entities/linkedin-profile.entity.ts:38](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-profile.entity.ts#L38)
+[entities/linkedin-profile.entity.ts:38](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-profile.entity.ts#L38)
+
+___
+
+### UrnCollection
+
+Ƭ **UrnCollection**: `LinkedInCollection`<`string`, `undefined`\>
+
+#### Defined in
+
+[responses/profile.response.get.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/profile.response.get.ts#L10)
 
 ## Variables
 
@@ -237,7 +281,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-base-company.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-base-company.ts#L3)
+[entities/linkedin-base-company.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-base-company.ts#L3)
 
 ___
 
@@ -247,7 +291,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-company.entity.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-company.entity.ts#L3)
+[entities/linkedin-company.entity.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-company.entity.ts#L4)
 
 ___
 
@@ -257,7 +301,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-conversation.entity.ts:21](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-conversation.entity.ts#L21)
+[entities/linkedin-conversation.entity.ts:21](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-conversation.entity.ts#L21)
 
 ___
 
@@ -267,7 +311,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-event.entity.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-event.entity.ts#L3)
+[entities/linkedin-event.entity.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-event.entity.ts#L3)
 
 ___
 
@@ -277,7 +321,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-invitation.entity.ts:13](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-invitation.entity.ts#L13)
+[entities/linkedin-invitation.entity.ts:13](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-invitation.entity.ts#L13)
 
 ___
 
@@ -287,7 +331,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-job-posting.ts:1](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-job-posting.ts#L1)
+[entities/linkedin-job-posting.ts:1](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-job-posting.ts#L1)
 
 ___
 
@@ -297,7 +341,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-mini-company.entity.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-mini-company.entity.ts#L3)
+[entities/linkedin-mini-company.entity.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-mini-company.entity.ts#L3)
 
 ___
 
@@ -307,7 +351,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-mini-profile.entity.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-mini-profile.entity.ts#L5)
+[entities/linkedin-mini-profile.entity.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-mini-profile.entity.ts#L5)
 
 ___
 
@@ -317,4 +361,4 @@ ___
 
 #### Defined in
 
-[entities/linkedin-profile.entity.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-profile.entity.ts#L4)
+[entities/linkedin-profile.entity.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-profile.entity.ts#L4)

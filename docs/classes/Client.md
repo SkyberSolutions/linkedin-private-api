@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / Client
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / Client
 
 # Class: Client
 
@@ -13,6 +13,7 @@
 - [conversation](Client.md#conversation)
 - [invitation](Client.md#invitation)
 - [login](Client.md#login)
+- [mappers](Client.md#mappers)
 - [message](Client.md#message)
 - [profile](Client.md#profile)
 - [request](Client.md#request)
@@ -36,7 +37,7 @@
 
 #### Defined in
 
-[core/client.ts:20](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/core/client.ts#L20)
+[core/client.ts:21](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/core/client.ts#L21)
 
 ## Properties
 
@@ -46,7 +47,7 @@
 
 #### Defined in
 
-[core/client.ts:32](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/core/client.ts#L32)
+[core/client.ts:33](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/core/client.ts#L33)
 
 ___
 
@@ -56,7 +57,7 @@ ___
 
 #### Defined in
 
-[core/client.ts:28](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/core/client.ts#L28)
+[core/client.ts:29](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/core/client.ts#L29)
 
 ___
 
@@ -66,7 +67,23 @@ ___
 
 #### Defined in
 
-[core/client.ts:24](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/core/client.ts#L24)
+[core/client.ts:25](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/core/client.ts#L25)
+
+___
+
+### mappers
+
+• **mappers**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `profile` | [`ProfileMapper`](ProfileMapper.md) |
+
+#### Defined in
+
+[core/client.ts:37](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/core/client.ts#L37)
 
 ___
 
@@ -76,7 +93,7 @@ ___
 
 #### Defined in
 
-[core/client.ts:34](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/core/client.ts#L34)
+[core/client.ts:35](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/core/client.ts#L35)
 
 ___
 
@@ -86,7 +103,7 @@ ___
 
 #### Defined in
 
-[core/client.ts:30](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/core/client.ts#L30)
+[core/client.ts:31](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/core/client.ts#L31)
 
 ___
 
@@ -96,7 +113,7 @@ ___
 
 #### Defined in
 
-[core/client.ts:18](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/core/client.ts#L18)
+[core/client.ts:19](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/core/client.ts#L19)
 
 ___
 
@@ -106,4 +123,4 @@ ___
 
 #### Defined in
 
-[core/client.ts:26](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/core/client.ts#L26)
+[core/client.ts:27](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/core/client.ts#L27)

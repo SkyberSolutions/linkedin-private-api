@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / GetOwnProfileResponse
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / GetOwnProfileResponse
 
 # Interface: GetOwnProfileResponse
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[responses/own-profile.response.get.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/responses/own-profile.response.get.ts#L4)
+[responses/own-profile.response.get.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/own-profile.response.get.ts#L4)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[responses/own-profile.response.get.ts:13](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/responses/own-profile.response.get.ts#L13)
+[responses/own-profile.response.get.ts:13](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/own-profile.response.get.ts#L13)

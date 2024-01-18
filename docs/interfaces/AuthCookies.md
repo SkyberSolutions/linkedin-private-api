@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / AuthCookies
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / AuthCookies
 
 # Interface: AuthCookies
 
@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[types/auth-cookies.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/auth-cookies.ts#L5)
+[types/auth-cookies.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/auth-cookies.ts#L5)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[types/auth-cookies.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/auth-cookies.ts#L2)
+[types/auth-cookies.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/auth-cookies.ts#L2)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[types/auth-cookies.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/auth-cookies.ts#L3)
+[types/auth-cookies.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/auth-cookies.ts#L3)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[types/auth-cookies.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/auth-cookies.ts#L4)
+[types/auth-cookies.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/auth-cookies.ts#L4)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[types/auth-cookies.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/auth-cookies.ts#L6)
+[types/auth-cookies.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/auth-cookies.ts#L6)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[types/auth-cookies.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/auth-cookies.ts#L7)
+[types/auth-cookies.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/auth-cookies.ts#L7)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[types/auth-cookies.ts:8](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/auth-cookies.ts#L8)
+[types/auth-cookies.ts:8](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/auth-cookies.ts#L8)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[types/auth-cookies.ts:9](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/auth-cookies.ts#L9)
+[types/auth-cookies.ts:9](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/auth-cookies.ts#L9)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[types/auth-cookies.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/auth-cookies.ts#L10)
+[types/auth-cookies.ts:10](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/auth-cookies.ts#L10)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[types/auth-cookies.ts:11](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/auth-cookies.ts#L11)
+[types/auth-cookies.ts:11](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/auth-cookies.ts#L11)
 
 ___
 
@@ -126,4 +126,4 @@ ___
 
 #### Defined in
 
-[types/auth-cookies.ts:12](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/auth-cookies.ts#L12)
+[types/auth-cookies.ts:12](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/auth-cookies.ts#L12)

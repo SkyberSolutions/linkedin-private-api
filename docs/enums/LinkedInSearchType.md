@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInSearchType
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInSearchType
 
 # Enumeration: LinkedInSearchType
 
@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[types/search-type.enum.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/search-type.enum.ts#L3)
+[types/search-type.enum.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/search-type.enum.ts#L3)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[types/search-type.enum.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/search-type.enum.ts#L4)
+[types/search-type.enum.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/search-type.enum.ts#L4)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[types/search-type.enum.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/search-type.enum.ts#L2)
+[types/search-type.enum.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/search-type.enum.ts#L2)

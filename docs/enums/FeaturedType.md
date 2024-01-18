@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / FeaturedType
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / FeaturedType
 
 # Enumeration: FeaturedType
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[entities/linkedin-conversation.entity.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-conversation.entity.ts#L5)
+[entities/linkedin-conversation.entity.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-conversation.entity.ts#L5)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[entities/linkedin-conversation.entity.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-conversation.entity.ts#L4)
+[entities/linkedin-conversation.entity.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-conversation.entity.ts#L4)

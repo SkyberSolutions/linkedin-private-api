@@ -1,4 +1,4 @@
-linkedin-private-api / [Exports](modules.md)
+@skybersolutions/linkedin-private-api / [Exports](modules.md)
 
 # NodeJS LinkedIn API
 ![Build](https://github.com/eilonmore/linkedin-private-api/workflows/Build/badge.svg?branch=master)

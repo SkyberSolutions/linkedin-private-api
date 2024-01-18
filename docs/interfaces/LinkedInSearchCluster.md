@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInSearchCluster
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInSearchCluster
 
 # Interface: LinkedInSearchCluster
 
@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[entities/linkedin-search-cluster.entity.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-search-cluster.entity.ts#L5)
+[entities/linkedin-search-cluster.entity.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-search-cluster.entity.ts#L5)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-search-cluster.entity.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-search-cluster.entity.ts#L6)
+[entities/linkedin-search-cluster.entity.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-search-cluster.entity.ts#L6)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[entities/linkedin-search-cluster.entity.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-search-cluster.entity.ts#L7)
+[entities/linkedin-search-cluster.entity.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-search-cluster.entity.ts#L7)

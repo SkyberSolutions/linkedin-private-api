@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / GetConversationResponse
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / GetConversationResponse
 
 # Interface: GetConversationResponse
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[responses/conversation.response.get.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/responses/conversation.response.get.ts#L5)
+[responses/conversation.response.get.ts:5](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/conversation.response.get.ts#L5)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[responses/conversation.response.get.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/responses/conversation.response.get.ts#L6)
+[responses/conversation.response.get.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/responses/conversation.response.get.ts#L6)

@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInNetworkType
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInNetworkType
 
 # Enumeration: LinkedInNetworkType
 
@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[types/network.enum.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/network.enum.ts#L2)
+[types/network.enum.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/network.enum.ts#L2)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[types/network.enum.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/network.enum.ts#L4)
+[types/network.enum.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/network.enum.ts#L4)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[types/network.enum.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/types/network.enum.ts#L3)
+[types/network.enum.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/types/network.enum.ts#L3)

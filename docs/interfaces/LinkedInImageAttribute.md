@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInImageAttribute
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInImageAttribute
 
 # Interface: LinkedInImageAttribute
 
@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[entities/linkedin-image-attribute.entity.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-image-attribute.entity.ts#L2)
+[entities/linkedin-image-attribute.entity.ts:2](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-image-attribute.entity.ts#L2)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-image-attribute.entity.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-image-attribute.entity.ts#L3)
+[entities/linkedin-image-attribute.entity.ts:3](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-image-attribute.entity.ts#L3)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[entities/linkedin-image-attribute.entity.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-image-attribute.entity.ts#L4)
+[entities/linkedin-image-attribute.entity.ts:4](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-image-attribute.entity.ts#L4)

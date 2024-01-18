@@ -1,4 +1,4 @@
-[linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInCompany
+[@skybersolutions/linkedin-private-api](../README.md) / [Exports](../modules.md) / LinkedInCompany
 
 # Interface: LinkedInCompany
 
@@ -9,6 +9,7 @@
 - [$anti\_abuse\_annotations](LinkedInCompany.md#$anti_abuse_annotations)
 - [$recipeTypes](LinkedInCompany.md#$recipetypes)
 - [$type](LinkedInCompany.md#$type)
+- [employeeCountRange](LinkedInCompany.md#employeecountrange)
 - [entityUrn](LinkedInCompany.md#entityurn)
 - [industry](LinkedInCompany.md#industry)
 - [industryUrns](LinkedInCompany.md#industryurns)
@@ -21,11 +22,11 @@
 
 ### $anti\_abuse\_annotations
 
-• **$anti\_abuse\_annotations**: { `attributeId`: `number` ; `entityId`: `number`  }[]
+• `Optional` **$anti\_abuse\_annotations**: { `attributeId`: `number` ; `entityId`: `number`  }[]
 
 #### Defined in
 
-[entities/linkedin-company.entity.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-company.entity.ts#L7)
+[entities/linkedin-company.entity.ts:8](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-company.entity.ts#L8)
 
 ___
 
@@ -35,7 +36,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-company.entity.ts:11](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-company.entity.ts#L11)
+[entities/linkedin-company.entity.ts:12](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-company.entity.ts#L12)
 
 ___
 
@@ -45,7 +46,17 @@ ___
 
 #### Defined in
 
-[entities/linkedin-company.entity.ts:6](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-company.entity.ts#L6)
+[entities/linkedin-company.entity.ts:7](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-company.entity.ts#L7)
+
+___
+
+### employeeCountRange
+
+• `Optional` **employeeCountRange**: `LinkedInIntegerRange`
+
+#### Defined in
+
+[entities/linkedin-company.entity.ts:14](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-company.entity.ts#L14)
 
 ___
 
@@ -55,27 +66,27 @@ ___
 
 #### Defined in
 
-[entities/linkedin-company.entity.ts:12](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-company.entity.ts#L12)
+[entities/linkedin-company.entity.ts:13](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-company.entity.ts#L13)
 
 ___
 
 ### industry
 
-• **industry**: `Record`<`string`, `string`\>
+• `Optional` **industry**: `Record`<`string`, `string`\>
 
 #### Defined in
 
-[entities/linkedin-company.entity.ts:13](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-company.entity.ts#L13)
+[entities/linkedin-company.entity.ts:15](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-company.entity.ts#L15)
 
 ___
 
 ### industryUrns
 
-• **industryUrns**: `string`[]
+• `Optional` **industryUrns**: `string`[]
 
 #### Defined in
 
-[entities/linkedin-company.entity.ts:14](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-company.entity.ts#L14)
+[entities/linkedin-company.entity.ts:16](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-company.entity.ts#L16)
 
 ___
 
@@ -91,7 +102,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-company.entity.ts:15](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-company.entity.ts#L15)
+[entities/linkedin-company.entity.ts:17](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-company.entity.ts#L17)
 
 ___
 
@@ -101,7 +112,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-company.entity.ts:18](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-company.entity.ts#L18)
+[entities/linkedin-company.entity.ts:20](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-company.entity.ts#L20)
 
 ___
 
@@ -111,7 +122,7 @@ ___
 
 #### Defined in
 
-[entities/linkedin-company.entity.ts:19](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-company.entity.ts#L19)
+[entities/linkedin-company.entity.ts:21](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-company.entity.ts#L21)
 
 ___
 
@@ -121,4 +132,4 @@ ___
 
 #### Defined in
 
-[entities/linkedin-company.entity.ts:20](https://github.com/SkyberSolutions/linkedin-private-api/blob/2fe9e6a/src/entities/linkedin-company.entity.ts#L20)
+[entities/linkedin-company.entity.ts:22](https://github.com/SkyberSolutions/linkedin-private-api/blob/c247a0c/src/entities/linkedin-company.entity.ts#L22)
