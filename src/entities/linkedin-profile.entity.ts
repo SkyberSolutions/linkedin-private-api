@@ -3,19 +3,19 @@ import { LinkedInVectorImage } from './linkedin-vector-image.entity';
 
 export const PROFILE_TYPE = 'com.linkedin.voyager.dash.identity.profile.Profile';
 
-interface LinkedInProfileGeoLocation {
+export interface LinkedInProfileGeoLocation {
   $type: 'com.linkedin.voyager.dash.identity.profile.ProfileGeoLocation';
   '*geo': string;
   $recipeTypes: string[];
   geoUrn: string;
 }
 
-interface LinkedInProfileLocation {
+export interface LinkedInProfileLocation {
   $type: 'com.linkedin.voyager.dash.identity.profile.ProfileLocation';
   countryCode: Country;
 }
 
-interface LinkedInPrimaryLocale {
+export interface LinkedInPrimaryLocale {
   $type: 'com.linkedin.common.Locale';
   $anti_abuse_annotations: {
     attributeId: number;
@@ -54,8 +54,8 @@ export interface LinkedInProfile {
   '*profileTestScores': string;
   '*profileTreasuryMediaProfile': string;
   '*profileVolunteerExperiences': string;
-  $recipeTypes: string[];
-  defaultToActivityTab: boolean;
+    $recipeTypes: string[];
+    defaultToActivityTab: boolean;
   educationOnProfileTopCardShown: boolean;
   entityUrn: ProfileUrn;
   firstName: string;
@@ -66,13 +66,16 @@ export interface LinkedInProfile {
   industryUrn: string;
   location: LinkedInProfileLocation;
   locationName: string;
-  multiLocaleFirstName: Record<string, string>;
+    multiLocaleFirstName: Record<string, string>;
   multiLocaleHeadline: Record<string, string>;
   multiLocaleLastName: Record<string, string>;
+  multiLocaleSummary: Record<string, string>;
   objectUrn: string;
   primaryLocale: LinkedInPrimaryLocale;
   profilePicture: LinkedInPhotoFilterPicture;
+  backgroundPicture: LinkedInPhotoFilterPicture;
   publicIdentifier: string;
+  summary: string;
   supportedLocales: LinkedInPrimaryLocale[];
   trackingId: string;
   versionTag: string;

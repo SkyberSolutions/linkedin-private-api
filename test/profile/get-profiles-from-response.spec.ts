@@ -48,8 +48,8 @@ test('should populate picture urls on the profile', () => {
   const originalPicture = response.included[0].picture;
 
   expect(profile.pictureUrls.length).toEqual(4);
-  profile.pictureUrls.forEach((url, index) => {
-    expect(url).toEqual(`${originalPicture?.rootUrl}${originalPicture?.artifacts[index].fileIdentifyingUrlPathSegment}`);
+  profile.pictureUrls.forEach((image, index) => {
+    expect(image.url).toEqual(`${originalPicture?.rootUrl}${originalPicture?.artifacts[index].fileIdentifyingUrlPathSegment}`);
   });
 });
 
