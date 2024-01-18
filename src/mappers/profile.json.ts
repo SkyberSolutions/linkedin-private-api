@@ -2,7 +2,7 @@
 
 export interface ProfileDate {
     day: number | undefined;
-    month: number;
+    month: number | undefined;
     year: number;
 }
 
@@ -25,9 +25,6 @@ export interface Education {
     school: string;
     description: string | null;
     logo_url: string | null;
-}
-
-export interface Language {
 }
 
 export interface Activity {

@@ -13,7 +13,9 @@ import { LinkedInPosition, POSITION_TYPE } from '../entities/linkedin-position.e
 import { LinkedInSkill, SKILL_TYPE } from '../entities/linkedin-skill.entity';
 import { EDUCATION_TYPE, LinkedInEducation } from '../entities/linkedin-education.entity';
 import { LinkedInCompany, COMPANY_TYPE } from '../entities/linkedin-company.entity';
-import { Image } from 'src/entities/image.entity';
+import { Image } from '../entities/image.entity';
+import { ProfileMapper } from '../mappers';
+import { ProfileJSON } from '../mappers/profile.json';
 
 const getProfilePictureUrls = (picture?: LinkedInVectorImage): Image[] =>
   map(picture?.artifacts, artifact => {
@@ -184,6 +186,13 @@ export class ProfileRepository {
 
     return profile
   }
+
+  profileToJson(input: Profile): ProfileJSON {
+    const mapper = new ProfileMapper()
+    return mapper.profileToJson(input)
+  }
+
+
 
   async getOwnProfile(): Promise<Profile | null> {
     const response = await this.client.request.profile.getOwnProfile();
