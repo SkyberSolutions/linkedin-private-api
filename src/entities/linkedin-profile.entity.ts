@@ -54,8 +54,8 @@ export interface LinkedInProfile {
   '*profileTestScores': string;
   '*profileTreasuryMediaProfile': string;
   '*profileVolunteerExperiences': string;
-  $recipeTypes: string[];
-  defaultToActivityTab: boolean;
+    $recipeTypes: string[];
+    defaultToActivityTab: boolean;
   educationOnProfileTopCardShown: boolean;
   entityUrn: ProfileUrn;
   firstName: string;
@@ -66,13 +66,16 @@ export interface LinkedInProfile {
   industryUrn: string;
   location: LinkedInProfileLocation;
   locationName: string;
-  multiLocaleFirstName: Record<string, string>;
+    multiLocaleFirstName: Record<string, string>;
   multiLocaleHeadline: Record<string, string>;
   multiLocaleLastName: Record<string, string>;
+  multiLocaleSummary: Record<string, string>;
   objectUrn: string;
   primaryLocale: LinkedInPrimaryLocale;
   profilePicture: LinkedInPhotoFilterPicture;
+  backgroundPicture: LinkedInPhotoFilterPicture;
   publicIdentifier: string;
+  summary: string;
   supportedLocales: LinkedInPrimaryLocale[];
   trackingId: string;
   versionTag: string;

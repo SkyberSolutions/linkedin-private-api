@@ -1,7 +1,6 @@
 import { filter, get, keyBy, map } from 'lodash';
 
 import { Client } from '../core/client';
-import { COMPANY_TYPE, LinkedInCompany } from '../entities/linkedin-company.entity';
 import { LinkedInMiniProfile, MINI_PROFILE_TYPE } from '../entities/linkedin-mini-profile.entity';
 import { LinkedInProfile, PROFILE_TYPE } from '../entities/linkedin-profile.entity';
 import { LinkedInVectorImage } from '../entities/linkedin-vector-image.entity';
@@ -9,12 +8,24 @@ import { MiniProfile, ProfileId } from '../entities/mini-profile.entity';
 import { Profile } from '../entities/profile.entity';
 import { GetProfileResponse, UrnCollection } from '../responses';
 import { LinkedInPositionGroup, POSITION_GROUP_TYPE } from '../entities/linkedin-position-group.entity';
-import { COLLECTION_RESPONSE_TYPE } from '../entities/linkedin-collection-response.entity';
+import { COLLECTION_RESPONSE_TYPE } from '../entities/linkedin-collection.entity';
 import { LinkedInPosition, POSITION_TYPE } from '../entities/linkedin-position.entity';
 import { LinkedInSkill, SKILL_TYPE } from '../entities/linkedin-skill.entity';
+import { EDUCATION_TYPE, LinkedInEducation } from '../entities/linkedin-education.entity';
+import { LinkedInCompany, COMPANY_TYPE } from '../entities/linkedin-company.entity';
+import { Image } from '../entities/image.entity';
+import { ProfileMapper } from '../mappers';
+import { ProfileJSON } from '../mappers/profile.json';
 
-const getProfilePictureUrls = (picture?: LinkedInVectorImage): string[] =>
-  map(picture?.artifacts, artifact => `${picture?.rootUrl}${artifact.fileIdentifyingUrlPathSegment}`);
+const getProfilePictureUrls = (picture?: LinkedInVectorImage): Image[] =>
+  map(picture?.artifacts, artifact => {
+    return {
+      width: artifact.with,
+      height: artifact.height,
+      url: `${picture?.rootUrl}${artifact.fileIdentifyingUrlPathSegment}`
+    }
+    
+  });
 
 const transformMiniProfile = (miniProfile: LinkedInMiniProfile): MiniProfile => ({
   ...miniProfile,
@@ -38,27 +49,29 @@ function notEmpty<TValue>(value: TValue | null | undefined): value is TValue {
 }
 
 const getElementsFromCollectionResponse = (response: GetProfileResponse, collectionUrn: string ): string[] => { 
+  const collection = (response.included ?? []).find(r => r.$type === COLLECTION_RESPONSE_TYPE && r.entityUrn === collectionUrn) as UrnCollection;
 
-  const collection = (response.included ?? []).find(r => 'data' in r && r.data.$type === COLLECTION_RESPONSE_TYPE && r.data.entityUrn === collectionUrn) as UrnCollection;
-
-  return collection.data.elements
+  return collection['*elements'] ?? collection.elements
  }
 
-const getPositionGroupsFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): LinkedInPositionGroup[] => {
-  
+ const getLinkedInProfileFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): LinkedInProfile => {
   const results = response.included || [];
 
-  const profile = results.find(r => '$type' in r && r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
+  return results.find(r => '$type' in r && r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
+};
+
+const getPositionGroupsFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): LinkedInPositionGroup[] => {
+  const profile = getLinkedInProfileFromResponse(publicIdentifier, response)
 
   const positionGroupsUrn = profile['*profilePositionGroups']
 
   const positionGroupsUrns = getElementsFromCollectionResponse(response, positionGroupsUrn)
-
+  const results = response.included || [];
   const positionGroups =  positionGroupsUrns.map(urn => {
     return results
         .find(r => '$type' in r && r.$type === POSITION_GROUP_TYPE && r.entityUrn === urn) as LinkedInPositionGroup;
   }).filter(notEmpty);
-
+  
   return positionGroups
 };
 
@@ -83,7 +96,7 @@ const getSkillsFromResponse = ( publicIdentifier: string, response: GetProfileRe
   
   const results = response.included || [];
 
-  const profile = results.find(r => '$type' in r && r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
+  const profile = getLinkedInProfileFromResponse(publicIdentifier, response)
 
   const collectionUrn = profile['*profileSkills']
 
@@ -97,13 +110,38 @@ const getSkillsFromResponse = ( publicIdentifier: string, response: GetProfileRe
   return skills
 };
 
-export const getProfileFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): Profile => {
+const getEducationsFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): LinkedInEducation[] => {
+  
   const results = response.included || [];
 
-    const profile = results.find(r => '$type' in r && r.$type === PROFILE_TYPE && r.publicIdentifier === publicIdentifier) as LinkedInProfile;
-    
-    const company = results.find(r => '$type' in r && r.$type === COMPANY_TYPE && profile.headline.includes(r.name)) as LinkedInCompany;
+  const profile = getLinkedInProfileFromResponse(publicIdentifier, response)
 
+  const collectionUrn = profile['*profileEducations']
+
+  const elementUrns = getElementsFromCollectionResponse(response, collectionUrn)
+
+  const educations =  elementUrns.map(urn => {
+    return results
+        .find(r => '$type' in r && r.$type === EDUCATION_TYPE && r.entityUrn === urn) as LinkedInEducation;
+  }).filter(notEmpty);
+
+  return educations
+};
+
+const getCompaniesFromResponse = ( companyUrns: string[], response: GetProfileResponse ): LinkedInCompany[] => {
+  const results = response.included || [];
+
+  const companies =  companyUrns.map(urn => {
+    return results
+        .find(r => '$type' in r && r.$type === COMPANY_TYPE && r.entityUrn === urn) as LinkedInCompany;
+  }).filter(notEmpty);
+
+  return companies
+};
+
+export const getProfileFromResponse = ( publicIdentifier: string, response: GetProfileResponse ): Profile => {
+  const profile = getLinkedInProfileFromResponse(publicIdentifier, response)
+    
     const pictureUrls = getProfilePictureUrls(get(profile, 'profilePicture.displayImageReference.vectorImage', undefined));
 
     const positionGroups: LinkedInPositionGroup[] = getPositionGroupsFromResponse(publicIdentifier, response)
@@ -112,13 +150,23 @@ export const getProfileFromResponse = ( publicIdentifier: string, response: GetP
 
     const skills: LinkedInSkill[] = getSkillsFromResponse(publicIdentifier, response)
 
+    const educations: LinkedInEducation[] = getEducationsFromResponse(publicIdentifier, response)
+
+    const companyUrns = [
+      ...positionGroups.map(positionGroup => positionGroup.companyUrn),
+      ...educations.map(education => education.companyUrn)
+    ]
+
+    const companies: LinkedInCompany[] = getCompaniesFromResponse(companyUrns, response)
+
     return {
       ...profile,
-      company,
       pictureUrls,
       positionGroups,
       positions,
-      skills
+      skills,
+      educations,
+      companies
     };
 };
 
@@ -130,12 +178,21 @@ export class ProfileRepository {
   }
 
   async getProfile({ publicIdentifier }: { publicIdentifier: string }): Promise<Profile> {
+
+    
     const response = await this.client.request.profile.getProfile({ publicIdentifier });
 
     const profile = getProfileFromResponse(publicIdentifier, response)
 
     return profile
   }
+
+  profileToJson(input: Profile): ProfileJSON {
+    const mapper = new ProfileMapper()
+    return mapper.profileToJson(input)
+  }
+
+
 
   async getOwnProfile(): Promise<Profile | null> {
     const response = await this.client.request.profile.getOwnProfile();

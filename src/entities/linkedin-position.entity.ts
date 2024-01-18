@@ -9,6 +9,7 @@ export interface LinkedInPosition {
     dateRange: LinkedInDateRange;
     multiLocaleCompanyName: Record<string, string>;
     companyName: string;
+    description: string;
     '*company': string;
     title: string;
     companyUrn: string;
@@ -16,6 +17,7 @@ export interface LinkedInPosition {
     employmentTypeUrn: string;
     entityUrn: LinkedInPositionUrn;
     multiLocaleGeoLocationName: Record<string, string>;
+    multiLocaleDescription: Record<string, string>;
     shouldShowSourceOfHireBadge: boolean;
     locationName: string;
     '*profileTreasuryMediaPosition': string,

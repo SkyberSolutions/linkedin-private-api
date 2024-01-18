@@ -4,6 +4,9 @@ import { getProfileFromResponse } from '../../src/repositories/profile.repositor
 import { LinkedInPositionGroup } from '../../src/entities/linkedin-position-group.entity';
 import { LinkedInPosition } from '../../src/entities/linkedin-position.entity';
 import { LinkedInSkill } from '../../src/entities/linkedin-skill.entity';
+import { LinkedInEducation } from '../../src/entities/linkedin-education.entity';
+import { LinkedInCompany } from 'src/entities/linkedin-company.entity';
+import { Image } from 'src/entities/image.entity';
 
 describe('getProfile', () => {
   it('should return the correct profile from the response', async () => {
@@ -14,20 +17,12 @@ describe('getProfile', () => {
     expect(difference(Object.keys(resultProfile), Object.keys(profile)).length).toEqual(0);
   });
 
-  it('should populate company on the result profile', async () => {
-    const { response, resultProfile, resultCompany } = createGetProfileResponse();
-    
-    const profile = getProfileFromResponse(resultProfile.publicIdentifier, response)
-
-    expect(profile.company).toEqual(resultCompany);
-  });
-
   it('should populate profile picture urls on the result profile', async () => {
     const { response, resultProfile } = createGetProfileResponse();
     const profile = getProfileFromResponse(resultProfile.publicIdentifier, response)
 
     expect(profile.pictureUrls).toHaveLength(4);
-    profile.pictureUrls.forEach((url: string) => expect(typeof url).toEqual('string'));
+    profile.pictureUrls.forEach((image: Image) => expect(typeof image.url).toEqual('string'));
   });
 
 
@@ -54,5 +49,22 @@ describe('getProfile', () => {
 
     expect(profile.skills).toHaveLength(10);
     profile.skills.forEach((skill: LinkedInSkill) => expect(typeof skill.name).toEqual('string'));
+  });
+
+  it('should populate education on the result profile', async () => {
+    const { response, resultProfile } = createGetProfileResponse();
+    const profile = getProfileFromResponse(resultProfile.publicIdentifier, response)
+
+    expect(profile.educations).toHaveLength(2);
+    profile.educations.forEach((education: LinkedInEducation) => expect(typeof education.schoolName).toEqual('string'));
+  });
+
+  it('should populate companies on the result profile', async () => {
+    const { response, resultProfile } = createGetProfileResponse();
+    const profile = getProfileFromResponse(resultProfile.publicIdentifier, response)
+
+    //Sum of position groups + educations
+    expect(profile.companies).toHaveLength(5);
+    profile.companies.forEach((company: LinkedInCompany) => expect(typeof company.name).toEqual('string'));
   });
 });
