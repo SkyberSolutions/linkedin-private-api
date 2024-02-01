@@ -1,6 +1,6 @@
-import { Profile } from "src/entities";
+import { Profile } from "../entities";
 import { Education, Experience, ProfileJSON } from "./profile.json";
-import { LinkedInDate } from "src/entities/linkedin-date.entity";
+import { LinkedInDate } from "../entities/linkedin-date.entity";
 
 function dateFromLinkedinDate(input: LinkedInDate | undefined) {
     if (input === undefined) return null

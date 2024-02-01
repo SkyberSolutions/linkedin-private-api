@@ -3,9 +3,9 @@ import { LinkedInCollectionResponse } from '../entities/linkedin-collection-resp
 import { LinkedInCompany } from '../entities/linkedin-company.entity';
 import { LinkedInProfile, ProfileUrn } from '../entities/linkedin-profile.entity';
 import { LinkedInPosition } from '../entities/linkedin-position.entity';
-import { LinkedInSkill } from 'src/entities/linkedin-skill.entity';
-import { LinkedInEducation } from 'src/entities/linkedin-education.entity';
-import { LinkedInCollection } from 'src/entities/linkedin-collection.entity';
+import { LinkedInSkill } from '../entities/linkedin-skill.entity';
+import { LinkedInEducation } from '../entities/linkedin-education.entity';
+import { LinkedInCollection } from '../entities/linkedin-collection.entity';
 
 export type UrnCollection = LinkedInCollection<string, undefined>;
 
