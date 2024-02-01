@@ -5,8 +5,8 @@ import { LinkedInPositionGroup } from '../../src/entities/linkedin-position-grou
 import { LinkedInPosition } from '../../src/entities/linkedin-position.entity';
 import { LinkedInSkill } from '../../src/entities/linkedin-skill.entity';
 import { LinkedInEducation } from '../../src/entities/linkedin-education.entity';
-import { LinkedInCompany } from 'src/entities/linkedin-company.entity';
-import { Image } from 'src/entities/image.entity';
+import { LinkedInCompany } from '../../src/entities/linkedin-company.entity';
+import { Image } from '../../src/entities/image.entity';
 
 describe('getProfile', () => {
   it('should return the correct profile from the response', async () => {

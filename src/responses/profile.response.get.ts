@@ -1,4 +1,4 @@
-import { LinkedInPositionGroup } from 'src/entities/linkedin-position-group.entity';
+import { LinkedInPositionGroup } from '../entities/linkedin-position-group.entity';
 import { LinkedInCollectionResponse } from '../entities/linkedin-collection-response.entity';
 import { LinkedInCompany } from '../entities/linkedin-company.entity';
 import { LinkedInProfile, ProfileUrn } from '../entities/linkedin-profile.entity';
