@@ -41,7 +41,7 @@ export class Login {
     try {
       const sessionsBuffer = (await fs.readFile(SESSIONS_PATH).catch(() => fs.writeFile(SESSIONS_PATH, '{}'))) || '{}';
       cachedSessions = JSON.parse(sessionsBuffer.toString());
-    } catch (err) {
+    } catch (_err) {
       cachedSessions = {};
     }
 

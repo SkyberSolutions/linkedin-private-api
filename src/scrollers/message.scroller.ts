@@ -17,7 +17,7 @@ export class MessageScroller extends CreatedBeforeScroller<MessageEvent> {
 
   private conversationId: ConversationId;
 
-  fieldName: 'createdAt' = 'createdAt';
+  fieldName: 'createdAt' = 'createdAt'; // eslint-disable-line @typescript-eslint/prefer-as-const
 
   constructor({
     fetchMessages,

@@ -14,7 +14,7 @@ type FetchConversations = ({
 export class ConversationScroller extends CreatedBeforeScroller<Conversation> {
   private fetchConversations: FetchConversations;
 
-  fieldName: 'lastActivityAt' = 'lastActivityAt';
+  fieldName: 'lastActivityAt' = 'lastActivityAt'; // eslint-disable-line @typescript-eslint/prefer-as-const
 
   recipients?: ProfileId | ProfileId[];
 
