@@ -5,8 +5,10 @@ export default tseslint.config(
     {
         ignores: [
             "**/tests/**/*.ts",
-            "**/lib/*",
-            "**/config/*"
+            "**/dist/*",
+            "**/config/*",
+            "**/coverage/*",
+            "**/docs/*"
         ],
       },
     {
