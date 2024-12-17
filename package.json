@@ -44,7 +44,7 @@
     }
   },
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^1.7.9",
     "cookie": "^1.0.2",
     "fs": "^0.0.1-security",
     "lodash": "^4.17.15",

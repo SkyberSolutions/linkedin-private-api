@@ -97,11 +97,11 @@ export class Login {
 
     const anonymousAuthResponse = await this.client.request.auth.getAnonymousAuth();
 
-    const sessionId = parseCookies<AnonymousCookies>(anonymousAuthResponse.headers['set-cookie']).JSESSIONID!;
+    const sessionId = parseCookies<AnonymousCookies>(anonymousAuthResponse.headers['set-cookie'] ?? []).JSESSIONID!;
 
     const authRes = await this.client.request.auth.authenticateUser({ username, password, sessionId });
 
-    const parsedCookies = parseCookies<AuthCookies>(authRes.headers['set-cookie']);
+    const parsedCookies = parseCookies<AuthCookies>(authRes.headers['set-cookie'] ?? []);
     fs.writeFile(SESSIONS_PATH, JSON.stringify({ ...cachedSessions, [username]: parsedCookies }));
 
     this.setRequestHeaders({ cookies: parsedCookies });

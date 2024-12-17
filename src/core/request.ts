@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosProxyConfig } from 'axios';
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosProxyConfig, HeadersDefaults, AxiosHeaderValue } from 'axios';
 import { URL } from 'url';
 
 import { linkedinApiUrl } from '../../config';
@@ -25,7 +25,7 @@ export class Request {
   }
 
   setHeaders(headers: Record<string, string>): void {
-    this.request.defaults.headers = headers;
+    this.request.defaults.headers = headers as HeadersDefaults & { [key: string]: AxiosHeaderValue; };
   }
 
   async get<T>(url: string, reqConfig?: ConfigNonFullResponse): Promise<T>;
